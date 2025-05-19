@@ -11,5 +11,5 @@
 - Feel free to improve or recommend some features in the game
 
 ### Sources
-Player Movement: https://github.com/WiggleWizard/quake3-movement-unity3d
-Grappling, Projectiles, Enemy AI: https://github.com/DaveGameDevelopment
+- Player Movement: https://github.com/WiggleWizard/quake3-movement-unity3d
+- Grappling, Projectiles, Enemy AI: https://github.com/DaveGameDevelopment
