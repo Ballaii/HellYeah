@@ -25,5 +25,17 @@ public class ShotgunPellet : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if(!targetHit)
+        {
+            targetHit = true;
+
+            TRexBoss tRex = collision.collider.gameObject.GetComponent<TRexBoss>();
+            if (tRex != null)
+            {
+                tRex.TakeDamage(damage * multiplier);
+                Destroy(gameObject);
+                Debug.Log("hit tRex");
+            }
+        }
     }
 }

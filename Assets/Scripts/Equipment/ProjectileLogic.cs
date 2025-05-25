@@ -36,6 +36,13 @@ public class ProjectileLogic : MonoBehaviour
 
                 Destroy(gameObject);
             }
+            if (collision.gameObject.GetComponent<TRexBoss>() != null)
+            {
+                TRexBoss tRex = collision.gameObject.GetComponent<TRexBoss>();
+                tRex.TakeDamage(damage * multiplier);
+                Destroy(gameObject);
+                Debug.Log("hit tRex");
+            }
 
             rb.isKinematic = true;
             transform.SetParent(collision.transform);

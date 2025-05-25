@@ -33,11 +33,21 @@ public class BladeBehavior : MonoBehaviour
 
             StartCoroutine(ResetHitFlag());
         }
+        else if (other.TryGetComponent<TRexBoss>(out TRexBoss tRex))
+        {
+            targetHit = true;
+            Debug.Log("hit tRex");
+            tRex.TakeDamage(damage * multiplier);
+
+            audioSource.PlayOneShot(hitSound);
+
+            StartCoroutine(ResetHitFlag());
+        }
     }
 
     private IEnumerator ResetHitFlag()
     {
-        // wait one FixedUpdate so you don’t immediately re-hit the same collider
+        // wait one FixedUpdate so you donï¿½t immediately re-hit the same collider
         yield return new WaitForFixedUpdate();
         targetHit = false;
     }

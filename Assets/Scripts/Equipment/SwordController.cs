@@ -124,5 +124,11 @@ public float comboInputWindow = 0.3f;   // How long you can trigger a combo
             enemy.TakeDamage(damage * multiplier, hitbox.transform.position);
             Debug.Log("hit enemy");
         }
+        if(!targetHit && other.TryGetComponent<TRexBoss>(out TRexBoss tRex))
+        {
+            targetHit = true;
+            tRex.TakeDamage(damage * multiplier);
+            Debug.Log("hit tRex");
+        }
     }
 }

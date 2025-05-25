@@ -12,6 +12,7 @@ public class TRexBoss : MonoBehaviour
     [Header("Boss Stats")]
     public int maxHealth = 2000;
     private int currentHealth;
+    public Collider hitbox; // Collider for damage detection
 
     [Header("Detection & Movement")]
     public Transform player;
@@ -137,7 +138,22 @@ public class TRexBoss : MonoBehaviour
         _lastTauntTime = -tauntCooldown;
     }
 
-    void OnEnable()
+    void Start()
+    {
+        player = player ?? GameObject.FindWithTag("Player")?.transform;
+        if (player == null)
+        {
+            Debug.LogError("TRexBoss: Player not found! Please assign the player transform.");
+            return;
+        }
+        healthBarCanvas = healthBarCanvas ?? GameObject.Find("BossHealth");
+        healthBar = healthBar ?? GameObject.Find("BossHealth")?.GetComponent<Slider>();
+
+        healthBarCanvas.SetActive(true);
+        healthBar.gameObject.SetActive(true);
+      }
+
+      void OnEnable()
     {
         // Reset state when enabled
         _state = BossState.Idle;
@@ -175,9 +191,33 @@ public class TRexBoss : MonoBehaviour
             case BossState.Idle:
                 UpdateIdleState(distToPlayer);
                 break;
-            
-            // Other states are managed by coroutines
+
+                // Other states are managed by coroutines
         }
+
+        // Handle player detection
+        if (isPlayerInRange)
+        {
+            if (distToPlayer <= stopRange && _state == BossState.Idle)
+            {
+                // Player is close enough to stop
+                agent.isStopped = true;
+            }
+            else if (distToPlayer > stopRange && _state == BossState.Idle)
+            {
+                // Player is far enough to chase
+                agent.isStopped = false;
+                agent.SetDestination(player.position);
+            }
+        }
+        else
+        {
+            // Player out of range, continue patrolling
+            Patrol();
+        }
+
+
+        //TakeDamage(1); // This is just a placeholder to ensure the TakeDamage method is available
     }
 
     private void UpdateIdleState(float distToPlayer)
@@ -337,45 +377,52 @@ public class TRexBoss : MonoBehaviour
             animator.SetTrigger("GunFire");
         }
         
-        if (audioSource && gunAttackClip) audioSource.PlayOneShot(gunAttackClip, gunAttackVolume);
+        
         
         // Make sure we're facing the player for the attack
         if (player != null)
         {
-            Vector3 lookPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
+            Vector3 lookPosition = new Vector3(player.position.x, player.position.y, player.position.z);
             transform.LookAt(lookPosition);
         }
         
         // Fire projectiles
-        for (int i = 0; i < burstCount; i++)
+         for (int i = 0; i < burstCount; i++)
+    {
+        foreach (var muzzle in gunMuzzles)
         {
-            foreach (var muzzle in gunMuzzles)
+            if (muzzle == null || projectilePrefab == null) 
+                continue;
+
+            // 1) Compute the full 3D direction to the player
+            Vector3 toPlayer = (player.position - muzzle.position).normalized;
+
+            // 2) Create a rotation that looks along that vector
+            Quaternion aimRot = Quaternion.LookRotation(toPlayer, Vector3.up);
+
+            // 3) Spawn the projectile with the new rotation
+            GameObject proj = Instantiate(projectilePrefab, muzzle.position, aimRot);
+            if (audioSource && gunAttackClip) audioSource.PlayOneShot(gunAttackClip, gunAttackVolume);
+
+            // 4) Send it flying
+                Rigidbody rb = proj.GetComponent<Rigidbody>();
+            if (rb != null)
             {
-                if (muzzle && projectilePrefab)
-                {
-                    GameObject projectile = Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
-                    Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
-                    
-                    if (projectileRb)
-                    {
-                        projectileRb.linearVelocity = muzzle.forward * projectileSpeed;
-                    }
-                    else
-                    {
-                        // If no rigidbody, try to find a projectile component
-                        var projectileComponent = projectile.GetComponent<Projectile>();
-                        if (projectileComponent)
-                        {
-                            projectileComponent.Fire(muzzle.forward * projectileSpeed);
-                        }
-                    }
-                    
-                    // Clean up projectile after some time
-                    Destroy(projectile, 5f);
-                }
+                // disable gravity if you want a straight shot:
+                rb.useGravity = false;
+                rb.linearVelocity = toPlayer * projectileSpeed;
             }
-            yield return new WaitForSeconds(fireRate);
+            else
+            {
+                var pc = proj.GetComponent<Projectile>();
+                if (pc != null) pc.Fire(toPlayer * projectileSpeed);
+            }
+
+            Destroy(proj, 5f);
         }
+
+        yield return new WaitForSeconds(fireRate);
+    }
         
         // Recovery phase
         yield return new WaitForSeconds(gunRecovery);
@@ -389,7 +436,10 @@ public class TRexBoss : MonoBehaviour
         if (_state == BossState.Dead || _state == BossState.Dying) return;
         
         // Apply damage
-        currentHealth = Mathf.Max(currentHealth - damage, 0);
+        currentHealth = Mathf.Clamp(currentHealth - damage, 0, maxHealth);
+        
+
+        Debug.Log($"TRexBoss took {damage} damage, current health: {currentHealth}");
         
         // Update UI
         if (healthBar) healthBar.value = currentHealth;
@@ -471,37 +521,53 @@ public class TRexBoss : MonoBehaviour
         // Optional: Slow-motion effect
         Time.timeScale = 0.2f;
         Time.fixedDeltaTime = defaultFixedDelta * Time.timeScale;
-        yield return new WaitForSecondsRealtime(1f);
-        Time.timeScale = 1f;
-        Time.fixedDeltaTime = defaultFixedDelta;
+        
 
         // Gib explosion effect
-        if (gibParticleEffect)
-        {
-            ParticleSystem gibEffect = Instantiate(gibParticleEffect, transform.position, Quaternion.identity);
-            gibEffect.Play();
-            Destroy(gibEffect.gameObject, gibEffect.main.duration + 1f);
-        }
-        
-        if (audioSource && explodeClip) audioSource.PlayOneShot(explodeClip, explodeVolume);
+       // — HERE: blast all child rigidbodies outward! —
+        Vector3 blastCenter = explosionOrigin.transform.position;
+        float radius = explosionRadius;
+        float force = explosionForce;
+        float tunedForce = 20f;
+        float tunedRadius = 5f;
+        float downBias = -1f;
 
-        // Switch to gib model
-        if (aliveModel) aliveModel.SetActive(false);
-        if (gibModel) 
+        yield return new WaitForSeconds(0.1f); // Short delay before explosion
+
+        foreach (Rigidbody rb in gibModel.GetComponentsInChildren<Rigidbody>(true))
         {
-            gibModel.SetActive(true);
-            
-            // Apply explosion force to all gib parts
-            Rigidbody[] gibRigidbodies = gibModel.GetComponentsInChildren<Rigidbody>();
-            foreach (Rigidbody rb in gibRigidbodies)
-            {
-                rb.isKinematic = false;
-                if (explosionOrigin)
-                {
-                    rb.AddExplosionForce(explosionForce, explosionOrigin.position, explosionRadius, explosionUpward, ForceMode.Impulse);
-                }
-            }
+            rb.AddExplosionForce(
+            tunedForce,
+            blastCenter,
+            tunedRadius,
+            downBias,
+            ForceMode.Impulse
+        );
+        // Reset time scale to normal
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = defaultFixedDelta;
         }
+
+        float randomDuration = Random.Range(minRagdollDuration, maxRagdollDuration);
+        yield return new WaitForSeconds(randomDuration);
+
+        // 2) Gib explosion…
+        if (gibParticleEffect != null)
+            Instantiate(gibParticleEffect, transform.position, Quaternion.identity).Play();
+
+        if (explodeClip != null) audioSource.PlayOneShot(explodeClip, explodeVolume);
+
+        aliveModel.SetActive(false);
+        gibModel.SetActive(true);
+
+
+        foreach (Rigidbody rb in gibModel.GetComponentsInChildren<Rigidbody>(true))
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
+        }
+        //yield return new WaitForSecondsRealtime(1f);
+        
 
         // Hide health bar if applicable
         if (healthBarCanvas) healthBarCanvas.SetActive(false);
@@ -509,6 +575,8 @@ public class TRexBoss : MonoBehaviour
         // Wait before destroying the game object
         yield return new WaitForSeconds(5f); // Give more time for gibs to be visible
         
+        gibModel.SetActive(false);
+        aliveModel.SetActive(false);
         _state = BossState.Dead;
         
         // Either destroy or disable based on your game's design
@@ -548,7 +616,7 @@ public class TRexBoss : MonoBehaviour
             else
             {
                 // Fallback if the player doesn't have the exact component
-                var damageable = other.GetComponent<IDamageable>();
+                var damageable = other.GetComponent<PlayerHealth>();
                 if (damageable != null)
                 {
                     damageable.TakeDamage((int)tailDamage);
