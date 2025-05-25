@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: f2b06897a977d96489494bfbba1018a7
+timeCreated: 1520154546
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/EliotProjectile.cs
+  uploadId: 363696

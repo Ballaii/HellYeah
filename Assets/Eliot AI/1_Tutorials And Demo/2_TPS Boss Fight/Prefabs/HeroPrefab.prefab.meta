@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6613a69f927f3f54286bfba7712c49fa
+timeCreated: 1582245828
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/2_TPS Boss Fight/Prefabs/HeroPrefab.prefab
+  uploadId: 363696

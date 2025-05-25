@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: eeeeee8414f74a96826c904c1135fac2
+timeCreated: 1556367087
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Interfaces/UtilityInterfaces/GeneralUtilityInterface.cs
+  uploadId: 363696

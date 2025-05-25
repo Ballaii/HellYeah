@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 868737b743421bd4eb2870675627b8a0
+timeCreated: 1586194103
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/3_MOBA/Prefabs/MOBA_Minion_Blue.prefab
+  uploadId: 363696

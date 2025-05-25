@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 714442127783bef41a2e4e43b4ea7156
+timeCreated: 1519969510
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Interfaces/ActionInterfaces/MotionActionInterface.cs
+  uploadId: 363696

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: d28344230494e4343b07e4ec9cfece5e
+timeCreated: 1582240948
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/1_First Person Shooter/Prefabs/FPS
+    Soldier Projectile.prefab
+  uploadId: 363696

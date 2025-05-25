@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d528dce79e9ecb743b09111f1f72f5ff, type: 3}
+  m_Name: MOBA Minion Melee Attack
+  m_EditorClassIdentifier: 
+  _interruptible: 1
+  _canStack: 0
+  _canAffectEnemies: 1
+  _canAffectFriends: 0
+  _adjustOriginRotation: 0
+  _initSkillBy: 3
+  _projectilePrefab: {fileID: 0}
+  _range: 2
+  _fieldOfView: 0
+  _loadTime: 1
+  _invocationDuration: 0
+  _invocationPing: 0
+  _effectDuration: 0
+  _effectPing: 0
+  _coolDown: 2
+  _minPower: 10
+  _maxPower: 20
+  _pushPower: 0
+  _interruptTarget: 1
+  _freezeMotion: 1
+  _freezeMotionOnCooldown: 1
+  _lookAtTarget: 0
+  resourcesCost: []
+  resourcesActions:
+  - resourceName: Health
+    affectionWay: 1
+    minPower: 10
+    maxPower: 20
+  _setStatus: 0
+  _status: 0
+  _statusDuration: 0
+  _setPositionAsTarget: 0
+  _makeNoise: 0
+  _noiseDuration: 0
+  _additionalEffects: []
+  _loadingAnimation: {fileID: 7400000, guid: dfc15c633f0d98141920018f79a042a6, type: 3}
+  _executingAnimation: {fileID: 0}
+  _loadingMessage: MeleeAttack
+  _executingMessage: 
+  _onApplyFx: {fileID: 0}
+  _onApplyFxOnTarget: {fileID: 0}
+  _makeChildOfTarget: 0
+  _onApplyMessageToTarget: 
+  _passPowerToTarget: 1
+  _tryPassDamageToNonAgent: 0
+  _onApplyMessageToCaster: 
+  _loadingSkillSounds: []
+  _executingSkillSounds: []
+  state: 0
+  editorAdvancedMode: 1

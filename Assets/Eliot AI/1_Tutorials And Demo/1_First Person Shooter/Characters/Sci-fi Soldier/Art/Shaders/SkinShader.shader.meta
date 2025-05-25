@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 02194ff69459f864c9a1d5e3db15b129
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/1_First Person Shooter/Characters/Sci-fi
+    Soldier/Art/Shaders/SkinShader.shader
+  uploadId: 363696

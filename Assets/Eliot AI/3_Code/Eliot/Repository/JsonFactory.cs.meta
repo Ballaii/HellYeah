@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 23e6387c41b44df0a74730de6d9985c2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/Repository/JsonFactory.cs
+  uploadId: 363696

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: ef2c73183950a6b4f84f3ef8cbb0e8ba
+timeCreated: 1540272593
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Components/Motion/MotionEngines/NavMeshMotionEngine.cs
+  uploadId: 363696

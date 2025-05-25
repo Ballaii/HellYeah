@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 7155c4d5f61d6af4e9e580c8a24ac8f7
+timeCreated: 1518495891
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/BehaviourEditor/NodesTransition.cs
+  uploadId: 363696

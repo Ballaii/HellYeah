@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1fa83b951ae9d134ab270afe9eb8746d
+timeCreated: 1586092302
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Example Skills/MOBA Minion Melee Attack.asset
+  uploadId: 363696

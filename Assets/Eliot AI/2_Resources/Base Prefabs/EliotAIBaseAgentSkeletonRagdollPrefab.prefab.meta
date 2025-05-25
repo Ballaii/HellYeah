@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: a49a7578e2c6daf479fa10e6de5c1d9f
+timeCreated: 1586701898
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Base Prefabs/EliotAIBaseAgentSkeletonRagdollPrefab.prefab
+  uploadId: 363696

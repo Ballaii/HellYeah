@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e203219b7e9819f4b954122acb6a546c
+timeCreated: 1586964215
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/BehaviourEditor/InvokerNode.cs
+  uploadId: 363696

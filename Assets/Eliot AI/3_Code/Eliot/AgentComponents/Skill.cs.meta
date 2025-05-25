@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d528dce79e9ecb743b09111f1f72f5ff
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: f03f7c4a8859df249bc9e89e713d8440, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Skill.cs
+  uploadId: 363696

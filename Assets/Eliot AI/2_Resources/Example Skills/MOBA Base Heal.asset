@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d528dce79e9ecb743b09111f1f72f5ff, type: 3}
+  m_Name: MOBA Base Heal
+  m_EditorClassIdentifier: 
+  _interruptible: 1
+  _canStack: 0
+  _canAffectEnemies: 0
+  _canAffectFriends: 1
+  _adjustOriginRotation: 1
+  _initSkillBy: 4
+  _projectilePrefab: {fileID: 0}
+  _range: 10
+  _fieldOfView: 0
+  _loadTime: 0
+  _invocationDuration: 0
+  _invocationPing: 0
+  _effectDuration: 0
+  _effectPing: 0
+  _coolDown: 3
+  _minPower: 10
+  _maxPower: 20
+  _pushPower: 0
+  _interruptTarget: 0
+  _freezeMotion: 1
+  _freezeMotionOnCooldown: 0
+  resourcesCost: []
+  resourcesActions:
+  - resourceName: Health
+    affectionWay: 0
+    minPower: 3
+    maxPower: 3
+  _setStatus: 0
+  _status: 0
+  _statusDuration: 0
+  _setPositionAsTarget: 0
+  _makeNoise: 0
+  _noiseDuration: 0
+  _additionalEffects: []
+  _loadingAnimation: {fileID: 7400000, guid: 1e768688017709245aed3bb86453c364, type: 3}
+  _executingAnimation: {fileID: 0}
+  _loadingMessage: 
+  _executingMessage: 
+  _onApplyFX: {fileID: 0}
+  _onApplyFXOnTarget: {fileID: 1179906630267414, guid: a97ffe8d0999bf3418de182bcef82cdf,
+    type: 3}
+  _makeChildOfTarget: 1
+  _onApplyMessageToTarget: 
+  _passPowerToTarget: 0
+  _tryPassDamageToNonAgent: 0
+  _onApplyMessageToCaster: 
+  _loadingSkillSounds: []
+  _executingSkillSounds: []
+  editorAdvancedMode: 0

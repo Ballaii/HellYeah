@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2d6cfe9f1b94ce8428ce3a22db4afd01
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/Project/EliotNodeSettings.cs
+  uploadId: 363696

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8cf7b734a0bce704f94a3679b18d68cc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: f620a9fdd81bffb449732c73572a2b82, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Components/Attributes/AttributesGroupScriptable.cs
+  uploadId: 363696

@@ -28,12 +28,12 @@ public class Enemy : MonoBehaviour
     public Transform player;           // assign in Inspector
     public float explosionForce = 500f;
     public float explosionRadius = 3f;
-    private Vector3 _lastExplosionOrigin;
+    public Vector3 _lastExplosionOrigin;
 
-    private Vector3 _explosionOrigin => player != null ? player.position : transform.position;
+    public Vector3 _explosionOrigin => player != null ? player.position : transform.position;
 
-    private AudioSource _audioSource;
-    private bool _isDying = false;
+    public AudioSource _audioSource;
+    public bool _isDying = false;
 
     [Header("AI Settings")]
     public bool isRanged;
@@ -41,22 +41,22 @@ public class Enemy : MonoBehaviour
     public LayerMask whatIsGround, whatIsplayer;
     //Patrol
     public Vector3 walkPoint;
-    bool walkPointSet;
+    public bool walkPointSet;
     public float walkPointRange;
     public float waitTime;
     //Attacking
     public float timeBetweenAttacks;
-    bool alreadyAttacked;
+    public bool alreadyAttacked;
     //States
     public float sightRange, attackRange;
-    bool playerInSightRange, playerInAttackRange;
+    public bool playerInSightRange, playerInAttackRange;
 
     [Header("Melee Settings")]
     public int attackDamage = 20;
     public float damageRadius = 1f;
 
      [Header("Animation")]
-    private Animator _animator;
+    public Animator _animator;
 
     void Awake()
     {
@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(DeathSequence());
     }
 
-    IEnumerator DeathSequence()
+    public IEnumerator DeathSequence()
     {
         _isDying = true;
         if (hitbox != null) hitbox.enabled = false;
@@ -154,7 +154,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    void SetRigidbodyState(bool isKinematic)
+    public void SetRigidbodyState(bool isKinematic)
     {
         Rigidbody[] rigidbodies = alive.GetComponentsInChildren<Rigidbody>(true);
         foreach (Rigidbody rigidbody in rigidbodies)
@@ -167,7 +167,7 @@ public class Enemy : MonoBehaviour
             mainRigidbody.isKinematic = !isKinematic;
     }
 
-    void SetColliderState(bool enabled)
+    public void SetColliderState(bool enabled)
     {
         Collider[] colliders = alive.GetComponentsInChildren<Collider>();
         foreach (Collider collider in colliders)
@@ -182,7 +182,7 @@ public class Enemy : MonoBehaviour
 
     //AI
 
-    void Patroling()
+    public void Patroling()
     {
         if (!walkPointSet) SearchWalkPoint();
 
@@ -195,7 +195,7 @@ public class Enemy : MonoBehaviour
             walkPointSet = false;
     }
 
-    void SearchWalkPoint()
+    public void SearchWalkPoint()
     {
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
@@ -204,7 +204,7 @@ public class Enemy : MonoBehaviour
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround)) walkPointSet = true;
     }
 
-    void Chase()
+    public void Chase()
     {
         // build a target that has the same X we already are at,
         // but the player’s Z and Y (height) so we chase straight forward/backward only:
@@ -217,7 +217,7 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(chaseTarget);
     }
 
-    void Attack()
+    public void Attack()
     {
         // we’re already at our own position, so just lock movement entirely:
         agent.SetDestination(transform.position);
@@ -243,7 +243,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void DealDamage()
+    public void DealDamage()
     {
         if (!isRanged)
         {
@@ -267,13 +267,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void ResetAttack()
+    public void ResetAttack()
     {
         alreadyAttacked = false;
         _animator.SetBool("Attacking", false);
     }
 
-    private void Update()
+    public void Update()
     {
         float speed = agent.velocity.magnitude / agent.speed; // normalized [0..1]
         _animator.SetFloat("Speed", speed);

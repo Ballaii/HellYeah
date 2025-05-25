@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9bae7b5d6517743be54c7f5d17fd98, type: 3}
+  m_Name: DefaultEliotGUIResources
+  m_EditorClassIdentifier: 
+  logoTexture: {fileID: 2800000, guid: dc7659b873fcae84f9da6451322f3b1e, type: 3}
+  facebookIconTexture: {fileID: 2800000, guid: 496749dd882019e4bb373cec69158c99, type: 3}
+  youtubeIconTexture: {fileID: 2800000, guid: 5d29c47d8d5d6fb4cb1f892c68bfa4f7, type: 3}
+  eliotWebIconTexture: {fileID: 2800000, guid: 6e46a8a7698533b438d910ef44cea485, type: 3}
+  backgroundStylesTexture: {fileID: 2800000, guid: ca8091a91d8a4f545b997556dccb668d,
+    type: 3}
+  electrifiedBackgroundTexture: {fileID: 2800000, guid: ef61578c60718b84fa0326560c69ee00,
+    type: 3}
+  EditorIcon: {fileID: 2800000, guid: 7f60fa220f5458b4ebd535aff6f32267, type: 3}
+  BE_BackgroundTexture: {fileID: 2800000, guid: a4b20bf949632834a9fb2521202483c5,
+    type: 3}
+  boxNorm: {fileID: 2800000, guid: 608b0dfb7e92920468ef2b3ff4a0a1a1, type: 3}
+  boxSelect: {fileID: 2800000, guid: 6d77d0453a2d01d4b9581982f907c6c4, type: 3}
+  boxGlow: {fileID: 2800000, guid: 6d77d0453a2d01d4b9581982f907c6c4, type: 3}
+  entryRectNorm: {fileID: 2800000, guid: 1f6dc0b04a82ac8469c79bfc0fa95355, type: 3}
+  entryRectSelect: {fileID: 2800000, guid: e9ac1e435c07033499ec54c51db19d3f, type: 3}
+  entryRectGlow: {fileID: 2800000, guid: e9ac1e435c07033499ec54c51db19d3f, type: 3}
+  rectBreak: {fileID: 2800000, guid: 510e7974f1ecce94b847a155b488b204, type: 3}
+  rectBreakGlow: {fileID: 2800000, guid: f51b1ff8471d1c744b8b1814c05c1174, type: 3}
+  rectNorm: {fileID: 2800000, guid: cd6db210dafced74fbbdb4d7feba2785, type: 3}
+  rectSelect: {fileID: 2800000, guid: 4384f83fb90cb124780a93fc75512b22, type: 3}
+  rectGlow: {fileID: 2800000, guid: 4384f83fb90cb124780a93fc75512b22, type: 3}
+  rombNorm: {fileID: 2800000, guid: a18e38c73c7345847a00f5fe44c1b763, type: 3}
+  rombSelect: {fileID: 2800000, guid: 8992fc26d20854245aab939456ff0027, type: 3}
+  rombGlow: {fileID: 2800000, guid: 8992fc26d20854245aab939456ff0027, type: 3}
+  utilityRect: {fileID: 2800000, guid: c73e1a0ac162e43438ab8ce486901b9a, type: 3}

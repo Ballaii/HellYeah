@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dbbbf755ad3b0834d8488edab4ec5246
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Editor/AgentComponents/AgentMotionEditor.cs
+  uploadId: 363696

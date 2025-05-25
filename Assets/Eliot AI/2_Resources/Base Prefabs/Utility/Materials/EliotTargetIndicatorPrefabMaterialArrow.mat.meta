@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b01f4da86c43cef4c8acef72b801cc68
+timeCreated: 1582070502
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Base Prefabs/Utility/Materials/EliotTargetIndicatorPrefabMaterialArrow.mat
+  uploadId: 363696

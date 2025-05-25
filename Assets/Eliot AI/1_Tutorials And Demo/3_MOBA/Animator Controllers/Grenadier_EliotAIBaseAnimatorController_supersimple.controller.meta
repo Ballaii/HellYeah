@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 74b4d8cd763c7f9448fa8247a066e424
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/3_MOBA/Animator Controllers/Grenadier_EliotAIBaseAnimatorController_supersimple.controller
+  uploadId: 363696

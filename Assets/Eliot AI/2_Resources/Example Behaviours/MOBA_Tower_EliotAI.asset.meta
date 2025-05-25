@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 66bc39fa4d30b8c4082d8bc7bb9d4499
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Example Behaviours/MOBA_Tower_EliotAI.asset
+  uploadId: 363696

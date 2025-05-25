@@ -1,0 +1,590 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8503572822190870959
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72d25e8f0aeb174884bd70f1f1c62e9, type: 3}
+  m_Name: Skill
+  m_EditorClassIdentifier: 
+  Exist: 1
+  EditorId: 3
+  NodeName: Skill
+  NodeId: Skill
+  Rect:
+    serializedVersion: 2
+    x: 1902
+    y: 1422
+    width: 216
+    height: 56
+  Transitions: []
+  TransitionsIn:
+  - {fileID: -4909251157448887147}
+  FuncIndex: 0
+  FuncNames:
+  - loading...
+  _functionName: 
+  Behaviour: {fileID: 11400000}
+  CaptureControl: 0
+  Skill: {fileID: 11400000, guid: abf85b834d3d0bd41b4628959648de05, type: 2}
+  ExecuteSkill: 1
+--- !u!114 &-6979446320491385002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7155c4d5f61d6af4e9e580c8a24ac8f7, type: 3}
+  m_Name: Transition
+  m_EditorClassIdentifier: 
+  Start: {fileID: -1748820378673725610}
+  End: {fileID: 433627350671601894}
+  Color: {r: 0.2, g: 0.8, b: 0.1, a: 1.1999999}
+  _isNegative: 0
+  TransitionsData:
+  - TransitionId: 
+    MinProbability: 100
+    MaxProbability: 100
+    MinCooldown: 0
+    MaxCooldown: 0
+    Terminate: 0
+    MethodData:
+      FullClassName: 
+      FullMethodName: 
+      MethodParameters: []
+    FunctionName: 
+    ConditionGroupIndex: 0
+    FuncIndex: 0
+    CaptureControl: 0
+    CaptureControlOnTrue: 0
+    CaptureControlOnFalse: 0
+    UseCondition: 0
+    Reverse: 0
+    Transition: {fileID: -6979446320491385002}
+--- !u!114 &-6656451752618415604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7155c4d5f61d6af4e9e580c8a24ac8f7, type: 3}
+  m_Name: Transition
+  m_EditorClassIdentifier: 
+  Start: {fileID: 3569042239091664704}
+  End: {fileID: -226846324808950434}
+  Color: {r: 0.85, g: 0.85, b: 0.85, a: 1.1999999}
+  _isNegative: 0
+  TransitionsData:
+  - TransitionId: 
+    MinProbability: 100
+    MaxProbability: 100
+    MinCooldown: 0
+    MaxCooldown: 0
+    Terminate: 0
+    MethodData:
+      FullClassName: 
+      FullMethodName: 
+      MethodParameters: []
+    FunctionName: 
+    ConditionGroupIndex: 0
+    FuncIndex: 0
+    CaptureControl: 0
+    CaptureControlOnTrue: 0
+    CaptureControlOnFalse: 0
+    UseCondition: 0
+    Reverse: 0
+    Transition: {fileID: -6656451752618415604}
+--- !u!114 &-4909251157448887147
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7155c4d5f61d6af4e9e580c8a24ac8f7, type: 3}
+  m_Name: Transition
+  m_EditorClassIdentifier: 
+  Start: {fileID: 433627350671601894}
+  End: {fileID: -8503572822190870959}
+  Color: {r: 0.85, g: 0.85, b: 0.85, a: 1.1999999}
+  _isNegative: 0
+  TransitionsData:
+  - TransitionId: 
+    MinProbability: 100
+    MaxProbability: 100
+    MinCooldown: 0
+    MaxCooldown: 0
+    Terminate: 0
+    MethodData:
+      FullClassName: 
+      FullMethodName: 
+      MethodParameters: []
+    FunctionName: 
+    ConditionGroupIndex: 0
+    FuncIndex: 0
+    CaptureControl: 0
+    CaptureControlOnTrue: 0
+    CaptureControlOnFalse: 0
+    UseCondition: 0
+    Reverse: 0
+    Transition: {fileID: -4909251157448887147}
+--- !u!114 &-1748820378673725610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04f5d23e01e9e34ca4a84103168c611, type: 3}
+  m_Name: Condition
+  m_EditorClassIdentifier: 
+  Exist: 1
+  EditorId: 2
+  NodeName: Condition
+  NodeId: Condition
+  Rect:
+    serializedVersion: 2
+    x: 2052
+    y: 1212
+    width: 216
+    height: 56
+  Transitions:
+  - {fileID: -6979446320491385002}
+  - {fileID: 114366350433127856}
+  TransitionsIn:
+  - {fileID: -116952459332430011}
+  FuncIndex: 23
+  FuncNames:
+  - EnemyIsAimingAtMe
+  - EnemyIsFleeing
+  - EnemyIsLoadingAttack
+  - FriendNotFullyHealthy
+  - HeardSomething
+  - InWayPointRange
+  - IsBeingTargeted
+  - ObstaclesBeforeTarget
+  - SeeBetterWeapon
+  - SeeBlock
+  - SeeCorpse
+  - SeeEnemy
+  - SeeEnergyPotion
+  - SeeFriend
+  - SeeHealingPotion
+  - SeeShelter
+  - SeeTargetsBack
+  - SeeUnitOfType
+  - TargetClosestEnemy
+  - TargetHasFullHealth
+  - TargetHasLowHealth
+  - TargetInCloseRange
+  - TargetInFarRange
+  - TargetInMidRange
+  - TargetInRange
+  - TargetInSkillRange
+  - TargetIsFake
+  - TargetIsFriendly
+  - TargetIsInFrontOfMe
+  - TargetNotFullyHealthy
+  - TargetWeakestEnemy
+  - TargetWeakestFriend
+  _functionName: TargetInMidRange
+  Behaviour: {fileID: 11400000}
+  CaptureControl: 0
+  MethodData:
+    FullClassName: Eliot.AgentComponents.StandardPerceptionConditionInterface
+    FullMethodName: TargetInMidRange
+    MethodParameters: []
+  ConditionGroupIndex: 3
+  Reverse: 0
+--- !u!114 &-226846324808950434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04f5d23e01e9e34ca4a84103168c611, type: 3}
+  m_Name: Condition
+  m_EditorClassIdentifier: 
+  Exist: 1
+  EditorId: 5
+  NodeName: Condition
+  NodeId: Condition
+  Rect:
+    serializedVersion: 2
+    x: 2052
+    y: 952
+    width: 216
+    height: 56
+  Transitions:
+  - {fileID: 114502058184001104}
+  TransitionsIn:
+  - {fileID: -6656451752618415604}
+  FuncIndex: 6
+  FuncNames:
+  - GetButton
+  - GetButtonDown
+  - GetButtonUp
+  - GetKey
+  - GetKeyDown
+  - GetKeyUp
+  - InputDetected
+  _functionName: InputDetected
+  Behaviour: {fileID: 11400000}
+  CaptureControl: 0
+  MethodData:
+    FullClassName: Eliot.AgentComponents.StandardPlayerInputConditionInterface
+    FullMethodName: InputDetected
+    MethodParameters: []
+  ConditionGroupIndex: 4
+  Reverse: 0
+--- !u!114 &-116952459332430011
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7155c4d5f61d6af4e9e580c8a24ac8f7, type: 3}
+  m_Name: Transition
+  m_EditorClassIdentifier: 
+  Start: {fileID: 287490311308223787}
+  End: {fileID: -1748820378673725610}
+  Color: {r: 0.2, g: 0.8, b: 0.1, a: 1.1999999}
+  _isNegative: 0
+  TransitionsData:
+  - TransitionId: 
+    MinProbability: 100
+    MaxProbability: 100
+    MinCooldown: 0
+    MaxCooldown: 0
+    Terminate: 0
+    MethodData:
+      FullClassName: 
+      FullMethodName: 
+      MethodParameters: []
+    FunctionName: 
+    ConditionGroupIndex: 0
+    FuncIndex: 0
+    CaptureControl: 0
+    CaptureControlOnTrue: 0
+    CaptureControlOnFalse: 0
+    UseCondition: 0
+    Reverse: 0
+    Transition: {fileID: -116952459332430011}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001aeb3efde68a04382931e17df01c51, type: 3}
+  m_Name: MOBA_HeroPlayer_EliotAI
+  m_EditorClassIdentifier: 
+  Nodes:
+  - {fileID: 3569042239091664704}
+  - {fileID: 287490311308223787}
+  - {fileID: -1748820378673725610}
+  - {fileID: -8503572822190870959}
+  - {fileID: 433627350671601894}
+  - {fileID: -226846324808950434}
+  - {fileID: 114374275669825978}
+  Transitions:
+  - {fileID: -6656451752618415604}
+  - {fileID: -116952459332430011}
+  - {fileID: -6979446320491385002}
+  - {fileID: 114366350433127856}
+  - {fileID: -4909251157448887147}
+  - {fileID: 114502058184001104}
+  _json: 
+--- !u!114 &114366350433127856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7155c4d5f61d6af4e9e580c8a24ac8f7, type: 3}
+  m_Name: Transition
+  m_EditorClassIdentifier: 
+  Start: {fileID: -1748820378673725610}
+  End: {fileID: 114374275669825978}
+  Color: {r: 0.8, g: 0.3, b: 0.2, a: 1.1999999}
+  _isNegative: 1
+  TransitionsData:
+  - TransitionId: 
+    MinProbability: 100
+    MaxProbability: 100
+    MinCooldown: 0
+    MaxCooldown: 0
+    Terminate: 0
+    MethodData:
+      FullClassName: 
+      FullMethodName: 
+      MethodParameters: []
+    FunctionName: 
+    ConditionGroupIndex: 0
+    FuncIndex: 0
+    CaptureControl: 0
+    CaptureControlOnTrue: 0
+    CaptureControlOnFalse: 0
+    UseCondition: 0
+    Reverse: 0
+    Transition: {fileID: 114366350433127856}
+--- !u!114 &114374275669825978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffabec1efbdada2488c6d068be832aaf, type: 3}
+  m_Name: Action
+  m_EditorClassIdentifier: 
+  Exist: 1
+  EditorId: 6
+  NodeName: Action
+  NodeId: Action
+  Rect:
+    serializedVersion: 2
+    x: 2222
+    y: 1312
+    width: 216
+    height: 56
+  Transitions: []
+  TransitionsIn:
+  - {fileID: 114366350433127856}
+  FuncIndex: 18
+  FuncNames:
+  - DodgeBack
+  - DodgeLeft
+  - DodgeLeftOrRight
+  - DodgeRandom
+  - DodgeRight
+  - Idle
+  - LookAtTarget
+  - Patrol
+  - RunAround
+  - RunAroundWaypoints
+  - RunAway
+  - RunToEnemyBase
+  - RunToHomeBase
+  - RunToTarget
+  - RushForward
+  - Stand
+  - WalkAroundWaypoints
+  - WalkAway
+  - WalkToTarget
+  - WanderAround
+  _functionName: WalkToTarget
+  Behaviour: {fileID: 11400000}
+  CaptureControl: 0
+  MethodData:
+    FullClassName: Eliot.AgentComponents.StandardMotionActionInterface
+    FullMethodName: WalkToTarget
+    MethodParameters: []
+  ActionGroupIndex: 2
+--- !u!114 &114502058184001104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7155c4d5f61d6af4e9e580c8a24ac8f7, type: 3}
+  m_Name: Transition
+  m_EditorClassIdentifier: 
+  Start: {fileID: -226846324808950434}
+  End: {fileID: 287490311308223787}
+  Color: {r: 0.2, g: 0.8, b: 0.1, a: 1.1999999}
+  _isNegative: 0
+  TransitionsData:
+  - TransitionId: 
+    MinProbability: 100
+    MaxProbability: 100
+    MinCooldown: 0
+    MaxCooldown: 0
+    Terminate: 0
+    MethodData:
+      FullClassName: 
+      FullMethodName: 
+      MethodParameters: []
+    FunctionName: 
+    ConditionGroupIndex: 0
+    FuncIndex: 0
+    CaptureControl: 0
+    CaptureControlOnTrue: 0
+    CaptureControlOnFalse: 0
+    UseCondition: 0
+    Reverse: 0
+    Transition: {fileID: 114502058184001104}
+--- !u!114 &287490311308223787
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e04f5d23e01e9e34ca4a84103168c611, type: 3}
+  m_Name: Condition
+  m_EditorClassIdentifier: 
+  Exist: 1
+  EditorId: 1
+  NodeName: Condition
+  NodeId: Condition
+  Rect:
+    serializedVersion: 2
+    x: 2052
+    y: 1082
+    width: 216
+    height: 56
+  Transitions:
+  - {fileID: -116952459332430011}
+  TransitionsIn:
+  - {fileID: 114502058184001104}
+  FuncIndex: 27
+  FuncNames:
+  - EnemyIsAimingAtMe
+  - EnemyIsFleeing
+  - EnemyIsLoadingAttack
+  - FriendNotFullyHealthy
+  - HeardSomething
+  - InWayPointRange
+  - IsBeingTargeted
+  - ObstaclesBeforeTarget
+  - SeeBetterWeapon
+  - SeeBlock
+  - SeeCorpse
+  - SeeEnemy
+  - SeeEnergyPotion
+  - SeeFriend
+  - SeeHealingPotion
+  - SeeShelter
+  - SeeTargetsBack
+  - SeeUnitOfType
+  - TargetClosestEnemy
+  - TargetHasFullHealth
+  - TargetHasLowHealth
+  - TargetInCloseRange
+  - TargetInFarRange
+  - TargetInMidRange
+  - TargetInRange
+  - TargetInSkillRange
+  - TargetIsFake
+  - TargetIsFriendly
+  - TargetIsInFrontOfMe
+  - TargetNotFullyHealthy
+  - TargetWeakestEnemy
+  - TargetWeakestFriend
+  _functionName: TargetIsFriendly
+  Behaviour: {fileID: 11400000}
+  CaptureControl: 0
+  MethodData:
+    FullClassName: Eliot.AgentComponents.StandardPerceptionConditionInterface
+    FullMethodName: TargetIsFriendly
+    MethodParameters: []
+  ConditionGroupIndex: 3
+  Reverse: 1
+--- !u!114 &433627350671601894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffabec1efbdada2488c6d068be832aaf, type: 3}
+  m_Name: Action
+  m_EditorClassIdentifier: 
+  Exist: 1
+  EditorId: 4
+  NodeName: Action
+  NodeId: Action
+  Rect:
+    serializedVersion: 2
+    x: 1902
+    y: 1312
+    width: 216
+    height: 56
+  Transitions:
+  - {fileID: -4909251157448887147}
+  TransitionsIn:
+  - {fileID: -6979446320491385002}
+  FuncIndex: 6
+  FuncNames:
+  - DodgeBack
+  - DodgeLeft
+  - DodgeLeftOrRight
+  - DodgeRandom
+  - DodgeRight
+  - Idle
+  - LookAtTarget
+  - Patrol
+  - RunAround
+  - RunAroundWaypoints
+  - RunAway
+  - RunToEnemyBase
+  - RunToHomeBase
+  - RunToTarget
+  - RushForward
+  - Stand
+  - WalkAroundWaypoints
+  - WalkAway
+  - WalkToTarget
+  - WanderAround
+  _functionName: LookAtTarget
+  Behaviour: {fileID: 11400000}
+  CaptureControl: 0
+  MethodData:
+    FullClassName: Eliot.AgentComponents.StandardMotionActionInterface
+    FullMethodName: LookAtTarget
+    MethodParameters: []
+  ActionGroupIndex: 2
+--- !u!114 &3569042239091664704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b700b82d4000714cb9a7bd016098bc9, type: 3}
+  m_Name: Entry
+  m_EditorClassIdentifier: 
+  Exist: 1
+  EditorId: 0
+  NodeName: Entry
+  NodeId: Entry
+  Rect:
+    serializedVersion: 2
+    x: 2052
+    y: 852
+    width: 216
+    height: 56
+  Transitions:
+  - {fileID: -6656451752618415604}
+  TransitionsIn: []
+  FuncIndex: 0
+  FuncNames:
+  - loading...
+  _functionName: 
+  Behaviour: {fileID: 11400000}
+  CaptureControl: 0

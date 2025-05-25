@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 338157f0e386690418fe763ffff1c761
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Editor/AgentComponents/ResourcesProfileScriptableEditor.cs
+  uploadId: 363696

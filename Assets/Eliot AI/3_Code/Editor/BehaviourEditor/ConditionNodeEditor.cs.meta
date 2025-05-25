@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d95cc57987c7ba249a337fe65f73e6b9
+timeCreated: 1518590854
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Editor/BehaviourEditor/ConditionNodeEditor.cs
+  uploadId: 363696

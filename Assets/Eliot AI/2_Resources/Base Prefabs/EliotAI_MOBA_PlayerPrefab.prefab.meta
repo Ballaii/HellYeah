@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d5f046df45e62c040afa56bbbafd186d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Base Prefabs/EliotAI_MOBA_PlayerPrefab.prefab
+  uploadId: 363696

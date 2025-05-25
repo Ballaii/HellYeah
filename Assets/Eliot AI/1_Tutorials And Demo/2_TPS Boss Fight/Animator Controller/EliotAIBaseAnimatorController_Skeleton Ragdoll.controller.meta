@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 80a66b50989b81a47a7e7e110857e1c8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/2_TPS Boss Fight/Animator Controller/EliotAIBaseAnimatorController_Skeleton
+    Ragdoll.controller
+  uploadId: 363696

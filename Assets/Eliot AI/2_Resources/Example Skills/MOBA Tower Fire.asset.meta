@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e150c4f7ccca20c41ab759cedecc88f4
+timeCreated: 1586092302
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Example Skills/MOBA Tower Fire.asset
+  uploadId: 363696

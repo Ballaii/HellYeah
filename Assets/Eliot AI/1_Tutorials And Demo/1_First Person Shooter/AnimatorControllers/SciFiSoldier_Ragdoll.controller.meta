@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 58d0e933112f28645b20fa4f0f96e390
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/1_First Person Shooter/AnimatorControllers/SciFiSoldier_Ragdoll.controller
+  uploadId: 363696

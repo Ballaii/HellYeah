@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 7a6b0589630c4995ae163cbb441ad171
+timeCreated: 1526213472
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Enums/AgentStatus.cs
+  uploadId: 363696

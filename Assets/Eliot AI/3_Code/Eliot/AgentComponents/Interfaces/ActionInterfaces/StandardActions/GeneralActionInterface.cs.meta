@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6eab578b71eb38d488b92ae32d1dbf80
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Interfaces/ActionInterfaces/StandardActions/GeneralActionInterface.cs
+  uploadId: 363696

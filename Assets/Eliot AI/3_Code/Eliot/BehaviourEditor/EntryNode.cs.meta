@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1b700b82d4000714cb9a7bd016098bc9
+timeCreated: 1518499504
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/BehaviourEditor/EntryNode.cs
+  uploadId: 363696

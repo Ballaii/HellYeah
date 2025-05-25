@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a67ded8fe16c1c64e931947c2f507a70
+timeCreated: 1520233533
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/BehaviourEditor/Enums/ConditionGroup.cs
+  uploadId: 363696

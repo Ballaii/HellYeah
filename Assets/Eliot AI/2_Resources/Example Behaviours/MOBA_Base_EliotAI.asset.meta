@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc77f41e2da2531489b33b56f97d98a4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Example Behaviours/MOBA_Base_EliotAI.asset
+  uploadId: 363696

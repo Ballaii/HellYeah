@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: df357cd42a5c12a4291a453236b4f3e4
+timeCreated: 1519970432
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Interfaces/ConditionInterfaces/PerceptionConditionInterface.cs
+  uploadId: 363696

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 377fe50f43b8c6f4f9951e98657e6e6f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Default Scriptables/DefaultResources.asset
+  uploadId: 363696

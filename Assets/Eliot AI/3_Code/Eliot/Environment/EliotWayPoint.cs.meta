@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a2db99a4f4e387c4c878aedc0dc9a812
+timeCreated: 1521178928
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/Environment/EliotWayPoint.cs
+  uploadId: 363696

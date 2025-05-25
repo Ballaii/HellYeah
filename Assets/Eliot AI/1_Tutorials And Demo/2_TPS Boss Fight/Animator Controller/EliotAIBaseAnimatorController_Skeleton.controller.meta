@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 71cc7521e6c18584b933be1e997e546e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/2_TPS Boss Fight/Animator Controller/EliotAIBaseAnimatorController_Skeleton.controller
+  uploadId: 363696

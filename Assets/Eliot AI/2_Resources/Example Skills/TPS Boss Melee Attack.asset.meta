@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1822766b1ba709d44b60c4b3644a83a8
+timeCreated: 1586092302
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Example Skills/TPS Boss Melee Attack.asset
+  uploadId: 363696

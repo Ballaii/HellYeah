@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 634a655bd4b7828459bf41e3134413b3
+timeCreated: 1519966985
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/AgentComponents/Components/Perception/AgentMemory.cs
+  uploadId: 363696

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 597777dd2e1f3f5449f4a72f4a384aec
+timeCreated: 1586808890
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Base Prefabs/EliotAIBaseMOBAPlayerSoldierPrefab.prefab
+  uploadId: 363696

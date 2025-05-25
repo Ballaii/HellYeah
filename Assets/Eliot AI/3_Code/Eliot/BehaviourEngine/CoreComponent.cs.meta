@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0cf9679bb11855d45b2309e5670e3fe6
+timeCreated: 1516654686
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/3_Code/Eliot/BehaviourEngine/CoreComponent.cs
+  uploadId: 363696

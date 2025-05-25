@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fdfb3ca97263906498d04085c98580c2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/1_Tutorials And Demo/3_MOBA/Animator Controllers/Chomper_EliotAIBaseAnimatorController.controller
+  uploadId: 363696

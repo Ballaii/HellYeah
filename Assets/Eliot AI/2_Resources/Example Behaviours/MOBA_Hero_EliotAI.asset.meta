@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a46c5a310ad562847860248d12be1c5e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 158558
+  packageName: Eliot AI Pro
+  packageVersion: 1.0.4
+  assetPath: Assets/Eliot AI/2_Resources/Example Behaviours/MOBA_Hero_EliotAI.asset
+  uploadId: 363696
