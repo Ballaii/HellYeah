@@ -43,6 +43,11 @@ public class CigController : MonoBehaviour
 
     public IEnumerator PerformSmoke()
     {
+        if (CigManager.isOnCooldown)
+        {
+            Debug.Log("Cigarette is on cooldown.");
+            yield break; // Exit if on cooldown
+        }
         item.SetActive(true);
         GetComponent<Animator>().Play("CigDrawAnimation");
         yield return new WaitForSeconds(.5f);
@@ -55,6 +60,7 @@ public class CigController : MonoBehaviour
         // Apply global damage multiplier
         // Tell the manager to handle the boost timing:
         CigManager.Instance.StartDamageBoost(damageMultiplier, boostDuration);
+
 
         // wait
         yield return new WaitForSeconds(.9f);

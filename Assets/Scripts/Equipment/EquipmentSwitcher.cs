@@ -1,4 +1,5 @@
 using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -40,6 +41,8 @@ public class EquipmentSwitcher : MonoBehaviour
     public KeyCode grapplingKey = KeyCode.C;
     public KeyCode barbellKey = KeyCode.Alpha4;
 
+    bool isUsing = false;
+
     void Start()
     {
         beerEquip.SetActive(false);
@@ -56,15 +59,58 @@ public class EquipmentSwitcher : MonoBehaviour
         if (PauseMenu.paused) return;
         if (Input.GetKeyDown(throwBeerKey))
         {
-            StartCoroutine(beerEquip.GetComponent<ThrowBeer>().Throw());
+            
+            if (BeerManager.isThrowOnCooldown)
+            {
+                Debug.Log("Throw is on cooldown.");
+                return; // Exit if on cooldown
+            }
+            if (isUsing)
+            {
+                Debug.Log("Cannot use");
+                return; // Exit if holding other items
+            }
+            else
+            {
+                isUsing = true;
+                StartCoroutine(beerEquip.GetComponent<ThrowBeer>().Throw());
+                BeerManager.Instance.StartCoroutine(BeerManager.Instance.ThrowCooldown(1.4f));
+                isUsing = false;
+            }
         }
         else if (Input.GetKeyDown(cigKey))
         {
-            StartCoroutine(cigEquip.GetComponent<CigController>().PerformSmoke());
+            if (isUsing)
+            {
+                Debug.Log("Cannot use");
+                return; // Exit if holding other items
+            }
+            else
+            {
+                isUsing = true;
+                StartCoroutine(cigEquip.GetComponent<CigController>().PerformSmoke());
+                isUsing = false;
+            }
         }
         else if (Input.GetKeyDown(drinkBeerKey))
         {
-            StartCoroutine(beerEquip.GetComponent<BeerDrinker>().PerformTiltDrink());
+            if (BeerManager.isDrinkOnCooldown)
+            {
+                Debug.Log("Drinking is on cooldown.");
+                return; // Exit if on cooldown
+            }
+            if (isUsing)
+            {
+                Debug.Log("Cannot use");
+                return; // Exit if holding other items
+            }
+            else
+            {
+                isUsing = true;
+                StartCoroutine(beerEquip.GetComponent<BeerDrinker>().PerformTiltDrink());
+                BeerManager.Instance.StartCoroutine(BeerManager.Instance.DrinkCooldown(5f));
+                isUsing = false;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha0))
         {
@@ -117,58 +163,6 @@ public class EquipmentSwitcher : MonoBehaviour
 
         yield return new WaitForSeconds(0.483f);
         player.GetComponent<Animator>().Play("New State");
-    }
-
-    IEnumerator EquipBeer()
-    {
-        if (Fists != null) Fists.SetActive(false);
-        if (beerEquip != null) beerEquip.SetActive(true);
-        if (cigEquip != null) cigEquip.SetActive(false);
-        if (grapplingEquip != null) grapplingEquip.SetActive(false);
-        if (barbellEquip != null) barbellEquip.SetActive(false);
-        if (player != null)
-            beerEquip.GetComponent<Animator>().Play("BeerDrawAnimation");
-        else
-        {
-            Debug.LogError("Animator is not assigned.");
-        }
-
-        yield return new WaitForSeconds(0.483f);
-        beerEquip.GetComponent<Animator>().Play("New State");
-
-        // Play swing sound
-        if (beerDrawSound != null)
-        {
-            audioSource.PlayOneShot(beerDrawSound);
-        }
-        
-    }
-
-    IEnumerator EquipCigarette()
-    {
-        if (Fists != null) Fists.SetActive(false);
-        if (beerEquip != null) beerEquip.SetActive(false);
-        if (cigEquip != null) cigEquip.SetActive(true);
-        if (grapplingEquip != null) grapplingEquip.SetActive(false);
-        if (barbellEquip != null) barbellEquip.SetActive(false);
-        // Play swing animation
-        if (player != null)
-            cigEquip.GetComponent<Animator>().Play("CigDrawAnimation");
-        else
-        {
-            Debug.LogError("Animator is not assigned.");
-        }
-
-        // Play swing sound
-        if (cigDrawSound != null)
-        {
-            audioSource.PlayOneShot(cigDrawSound);
-        }
-
-        yield return new WaitForSeconds(0.4f);
-        cigEquip.GetComponent<Animator>().Play("New State");
-
-        
     }
 
     IEnumerator EquipSword()

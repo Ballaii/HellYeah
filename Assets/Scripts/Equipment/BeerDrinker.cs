@@ -35,6 +35,11 @@ public class BeerDrinker : MonoBehaviour
 
     public IEnumerator PerformTiltDrink()
     {
+        if (BeerManager.isDrinkOnCooldown)
+        {
+            Debug.Log("Drinking is on cooldown.");
+            yield break; // Exit if on cooldown
+        }
         // hp
         if (beer == null || playerHealth.currentHealth < 0)
         {
@@ -66,5 +71,7 @@ public class BeerDrinker : MonoBehaviour
         isDrinking = false;
         leftArm.SetActive(true);
         beer.item.SetActive(false);
+
+        BeerManager.Instance.DrinkCooldown(5f); // Start cooldown for drinking
     }
 }

@@ -17,7 +17,7 @@ public class WaveManager : MonoBehaviour
       private void OnGUI()
       {
             GUI.Label(new Rect(500, 10, 200, 20), "Wave: " + (currentWave + 1));
-            GUI.Label(new Rect(500, 30, 200, 20), "Enemies Dead: " + enemiesDead);
+            //GUI.Label(new Rect(500, 30, 200, 20), "Enemies Dead: " + enemiesDead);
       }
 
       private void Update()

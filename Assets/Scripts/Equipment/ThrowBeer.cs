@@ -36,14 +36,24 @@ public class ThrowBeer : MonoBehaviour
 
     public IEnumerator Throw()
     {
+        if (BeerManager.isThrowOnCooldown)
+        {
+            Debug.Log("Throw is on cooldown.");
+            yield break; // Exit if on cooldown
+        }
+        
+        if (leftArm.activeSelf)
+        {
+            leftArm.SetActive(false);
+        }
+        
         item.SetActive(true);
-        leftArm.SetActive(false);
         item.GetComponent<Animator>().Play("BeerDrawAnimation");
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.7f);
 
         //play anim
         item.GetComponent<Animator>().Play("BeerThrow");
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.7f);
         //play sound
         //AudioSource audioSource = beer.GetComponent<AudioSource>();
 
@@ -72,9 +82,14 @@ public class ThrowBeer : MonoBehaviour
         // 5) Cooldown & ammo bookkeeping
         readyToThrow = false;
         Invoke(nameof(resetThrow), throwCooldown);
-        item.SetActive(false);
+        
         leftArm.SetActive(true);
         animator.Play("New State");
+        item.GetComponent<Animator>().Play("New State");
+
+        item.SetActive(false);
+
+        BeerManager.Instance.ThrowCooldown(1.4f); // Start cooldown for throwing
     }
 
 

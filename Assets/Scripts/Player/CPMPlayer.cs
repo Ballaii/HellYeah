@@ -28,6 +28,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 // Contains the command the user wishes upon the character
@@ -59,6 +60,9 @@ public class CPMPlayer : MonoBehaviour
     [Header("Camera Effects")]                   // ← NEW: Added for grappling integration
     public PlayerCam cam;
     public float grappleFov = 95f;               // ← NEW: Added for grappling integration
+
+    public TextMeshProUGUI fpsText; // ← NEW: Added for FPS display
+    public TextMeshProUGUI speedText; // ← NEW: Added for speed display
 
     /* Movement stuff */
     public float moveSpeed = 7.0f;                // Ground move speed
@@ -127,6 +131,11 @@ public class CPMPlayer : MonoBehaviour
 
     private void Start()
     {
+        // fps and speed display setup
+        
+        fpsText.text = fps.ToString();
+        speedText.text = moveSpeed.ToString() + " ups";
+
         // Hide the cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -160,7 +169,10 @@ public class CPMPlayer : MonoBehaviour
 
     private void Update()
     {
-        if(PauseMenu.paused) return;
+        // FPS and speed display update
+        fpsText.text = "FPS " + fps.ToString();
+        speedText.text = "Speed " + Mathf.Round(_controller.velocity.magnitude * 100) / 100 + " ups";
+        if (PauseMenu.paused) return;
         if(GameOver.dead) return;
         // Do FPS calculation
         frameCount++;
@@ -556,13 +568,13 @@ public class CPMPlayer : MonoBehaviour
         playerVelocity.z += accelspeed * wishdir.z;
     }
 
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(0, 0, 400, 100), "FPS: " + fps, style);
-        var ups = _controller.velocity;
-        ups.y = 0;
-        GUI.Label(new Rect(0, 15, 400, 100), "Speed: " + Mathf.Round(ups.magnitude * 100) / 100 + "ups", style);
-        GUI.Label(new Rect(0, 30, 400, 100), "Top Speed: " + Mathf.Round(playerTopVelocity * 100) / 100 + "ups", style);
-        GUI.Label(new Rect(0, 45, 400, 100), "State: " + state.ToString(), style);  // ← NEW: Added for grappling integration
-    }
+   // private void OnGUI()
+   // {
+        //GUI.Label(new Rect(0, 0, 400, 100), "FPS: " + fps, style);
+       // var ups = _controller.velocity;
+       // ups.y = 0;
+       // GUI.Label(new Rect(0, 15, 400, 100), "Speed: " + Mathf.Round(ups.magnitude * 100) / 100 + "ups", style);
+        //GUI.Label(new Rect(0, 30, 400, 100), "Top Speed: " + Mathf.Round(playerTopVelocity * 100) / 100 + "ups", style);
+       // GUI.Label(new Rect(0, 45, 400, 100), "State: " + state.ToString(), style);  // ← NEW: Added for grappling integration
+    //}
 }
