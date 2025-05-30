@@ -6323,6 +6323,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2031677682}
+  - {fileID: 1483295565}
   m_Father: {fileID: 1429548197}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &81161509
@@ -19170,6 +19171,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (7)
@@ -20628,16 +20637,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 233316864}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.188}
+  m_LocalRotation: {x: -0.23515654, y: 0.36237824, z: 0.0891757, w: 0.89745814}
+  m_LocalPosition: {x: 0, y: 0, z: -0.19}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1281264408}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -29.125, y: 44.153, z: -0.68}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.447, y: 0.671}
+  m_AnchoredPosition: {x: 0.416, y: 0.671}
   m_SizeDelta: {x: 0.2, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233316866
@@ -23744,6 +23753,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (19)
@@ -28175,6 +28192,95 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3051825556564215782, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
   m_PrefabInstance: {fileID: 1546184082}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &293827101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 293827102}
+  - component: {fileID: 293827104}
+  - component: {fileID: 293827103}
+  - component: {fileID: 293827105}
+  m_Layer: 20
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &293827102
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293827101}
+  m_LocalRotation: {x: -0.069894515, y: 0.14907919, z: -0.016310744, w: 0.98621714}
+  m_LocalPosition: {x: 0, y: 0, z: -0.077}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1746597989}
+  m_Father: {fileID: 1483295565}
+  m_LocalEulerAnglesHint: {x: -7.643, y: 17.397, z: -3.066}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.469, y: 0.027}
+  m_SizeDelta: {x: 0, y: -0.029999971}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &293827103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293827101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.18867922, g: 0.17591563, b: 0.14150941, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300026, guid: db63fa1c2adceb141974024b30ffa6db, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &293827104
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293827101}
+  m_CullTransparentMesh: 1
+--- !u!225 &293827105
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293827101}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &296903376
 GameObject:
   m_ObjectHideFlags: 0
@@ -32837,6 +32943,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (16)
@@ -42070,6 +42184,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (14)
@@ -45498,6 +45620,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (6)
@@ -46639,6 +46769,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (13)
@@ -52213,6 +52351,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (9)
@@ -53593,6 +53739,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (2)
@@ -60520,6 +60674,7 @@ Transform:
   - {fileID: 1565821130}
   - {fileID: 2049031258}
   - {fileID: 555478623}
+  - {fileID: 925254231}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574581520
@@ -66337,6 +66492,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (11)
@@ -93199,6 +93362,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (8)
@@ -94528,7 +94699,7 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: 9da43dca6d8d7db4dbc39d5bbe03573b, type: 2}
     - target: {fileID: 85603153626931776, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 130423
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 94825426190720156, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
       propertyPath: m_Layer
@@ -95462,6 +95633,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1520817386}
+    - target: {fileID: 5083256521875712352, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
+      propertyPath: isInvincible
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5094491166783212135, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
       propertyPath: m_Layer
       value: 20
@@ -96140,6 +96315,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4450456499456639402, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2024868056}
+    - targetCorrespondingSourceObject: {fileID: 4450456499456639402, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2024868061}
+    - targetCorrespondingSourceObject: {fileID: 4450456499456639402, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2024868060}
     - targetCorrespondingSourceObject: {fileID: 348905962263575250, guid: 68d0613014ef372439d789d6ac12e657, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1325115096}
@@ -97217,6 +97398,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (18)
@@ -100767,6 +100956,65 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &925254230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925254231}
+  - component: {fileID: 925254232}
+  m_Layer: 0
+  m_Name: ComboManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &925254231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925254230}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 572845380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &925254232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925254230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb5fbe4641011345a52bed5b3490a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboResetTime: 1
+  comboCanvasGroup: {fileID: 293827105}
+  comboText: {fileID: 1746597991}
+  screenFlashAnimator: {fileID: 0}
+  audioSource: {fileID: 1520817386}
+  doubleKillClip: {fileID: 8300000, guid: 9aa69fcf0653051468e53a6d1356a5d2, type: 3}
+  tripleKillClip: {fileID: 8300000, guid: d29578e7cc3b6e7498a43048b485add8, type: 3}
+  megaKillClip: {fileID: 8300000, guid: 9696a3a2d6dc8e441a93250fa21deb6e, type: 3}
+  ultraKillClip: {fileID: 8300000, guid: 74c1da9569817254bbb7733cf9575f31, type: 3}
+  godlikeClip: {fileID: 8300000, guid: 2e8bd0aed4da3aa4da89f2ed09d489d4, type: 3}
+  impulseSource: {fileID: 2024868061}
+  postProcessVolume: {fileID: 2024868060}
+  onComboTriggered:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &926393119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3051825556564215782, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
@@ -102006,6 +102254,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (9)
@@ -110453,6 +110709,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (5)
@@ -112548,16 +112812,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102239377}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.016}
+  m_LocalRotation: {x: -0, y: 0.112501204, z: -0, w: 0.99365157}
+  m_LocalPosition: {x: 0, y: 0, z: -0.015998373}
   m_LocalScale: {x: 0.11, y: 0.11, z: 0.11}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1281264408}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 12.919, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.904, y: 0.298}
+  m_AnchoredPosition: {x: 0.9039841, y: 0.3000002}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102239379
@@ -112582,8 +112846,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74f46f723eeda3846b764eacc7db09d0, type: 2}
+  m_sharedMaterial: {fileID: 6309102492429645455, guid: 74f46f723eeda3846b764eacc7db09d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -112613,7 +112877,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -120106,6 +120370,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (3)
@@ -125191,6 +125463,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (15)
@@ -144963,7 +145243,7 @@ PrefabInstance:
       objectReference: {fileID: 1456975193}
     - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
       propertyPath: burstCount
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
       propertyPath: tailDamage
@@ -144986,6 +145266,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
+      propertyPath: explosionForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
       propertyPath: tailAttackClip
       value: 
       objectReference: {fileID: 8300000, guid: 02f56b5a76445ed41b19583b25d471db, type: 3}
@@ -144993,6 +145277,10 @@ PrefabInstance:
       propertyPath: explosionOrigin
       value: 
       objectReference: {fileID: 1762237582}
+    - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
+      propertyPath: explosionRadius
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
       propertyPath: gunAttackVolume
       value: 1.13
@@ -145003,7 +145291,15 @@ PrefabInstance:
       objectReference: {fileID: 1456975191}
     - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
       propertyPath: projectileSpeed
-      value: 350
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
+      propertyPath: maxRagdollDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
+      propertyPath: minRagdollDuration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5799795354065341612, guid: db05f804d9ec6d848a1aa4fd5f38625f, type: 3}
       propertyPath: gunMuzzles.Array.size
@@ -145468,6 +145764,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (23)
@@ -154653,6 +154957,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (10)
@@ -154714,6 +155026,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (17)
@@ -157527,6 +157847,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (12)
@@ -157754,6 +158082,121 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1483295564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483295565}
+  - component: {fileID: 1483295568}
+  - component: {fileID: 1483295567}
+  - component: {fileID: 1483295566}
+  - component: {fileID: 1483295569}
+  m_Layer: 20
+  m_Name: combo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1483295565
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483295564}
+  m_LocalRotation: {x: 0.009042726, y: -0.25773856, z: -0.03330366, w: 0.9655982}
+  m_LocalPosition: {x: 0, y: 0, z: -0.42}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 293827102}
+  m_Father: {fileID: 81161508}
+  m_LocalEulerAnglesHint: {x: 0.017, y: -29.891, z: -3.955}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.692, y: 1.146}
+  m_SizeDelta: {x: 5.25, y: 0.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1483295566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483295564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1483295567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483295564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &1483295568
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483295564}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 2024868052}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!225 &1483295569
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483295564}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!43 &1484728883
 Mesh:
   m_ObjectHideFlags: 0
@@ -163296,6 +163739,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (4)
@@ -173809,6 +174260,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (20)
@@ -181314,13 +181773,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.7
-  m_fontSizeBase: 0.7
+  m_fontSize: 1
+  m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -181373,16 +181832,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714689471}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.207}
+  m_LocalRotation: {x: -0, y: -0.1216816, z: -0, w: 0.99256927}
+  m_LocalPosition: {x: 0, y: 0, z: -0.205}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1281264408}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -13.978, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.455, y: 0.562}
+  m_AnchoredPosition: {x: -0.431, y: 0.571}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!43 &1719010644
@@ -181767,6 +182226,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (1)
@@ -185426,6 +185893,142 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1746597988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1746597989}
+  - component: {fileID: 1746597990}
+  - component: {fileID: 1746597991}
+  m_Layer: 20
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1746597989
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746597988}
+  m_LocalRotation: {x: 0.24608003, y: 0.23828815, z: -0.051453885, w: 0.93809164}
+  m_LocalPosition: {x: 0, y: 0, z: 2.171}
+  m_LocalScale: {x: 0.52, y: 0.52, z: 0.52}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 293827102}
+  m_LocalEulerAnglesHint: {x: 29.092, y: 28.858, z: 1.36}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.339, y: -1.887}
+  m_SizeDelta: {x: 9.57, y: 3.24}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1746597990
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746597988}
+  m_CullTransparentMesh: 1
+--- !u!114 &1746597991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746597988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: kill killkill
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 74f46f723eeda3846b764eacc7db09d0, type: 2}
+  m_sharedMaterial: {fileID: 6309102492429645455, guid: 74f46f723eeda3846b764eacc7db09d0, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 1
+  m_fontSizeBase: 1
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 16
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 7
+  m_wordSpacing: 1
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1749602101
 GameObject:
   m_ObjectHideFlags: 0
@@ -186181,6 +186784,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (24)
@@ -196612,6 +197223,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (21)
@@ -204042,10 +204661,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 60
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74f46f723eeda3846b764eacc7db09d0, type: 2}
+  m_sharedMaterial: {fileID: 6309102492429645455, guid: 74f46f723eeda3846b764eacc7db09d0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -204142,16 +204761,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861239971}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.978}
+  m_LocalRotation: {x: -0.063419506, y: -0.12761901, z: -0.05223637, w: 0.9884142}
+  m_LocalPosition: {x: 0, y: 0, z: 1.0049986}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1281264408}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -7.973, y: -14.362, z: -5.044}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.696, y: 1.144}
+  m_AnchoredPosition: {x: -1.3639963, y: 0.908}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!43 &1861244353
@@ -208188,6 +208807,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR (22)
@@ -227886,6 +228513,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ditherMaterial: {fileID: 2100000, guid: b07919f0195802143bdf1b8b9676c65d, type: 2}
   colorDepth: 8
+--- !u!114 &2024868060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024868046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 0}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
+--- !u!114 &2024868061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024868046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImpulseDefinition:
+    ImpulseChannel: 1
+    ImpulseShape: 2
+    CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ImpulseDuration: 0.2
+    ImpulseType: 0
+    DissipationRate: 0.25
+    RawSignal: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    RepeatMode: 0
+    Randomize: 1
+    TimeEnvelope:
+      AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      AttackTime: 0
+      SustainTime: 0.2
+      DecayTime: 0.7
+      ScaleWithImpact: 1
+      HoldForever: 0
+    ImpactRadius: 100
+    DirectionMode: 0
+    DissipationMode: 2
+    DissipationDistance: 100
+    PropagationSpeed: 343
+  DefaultVelocity: {x: 0, y: -1, z: 0}
 --- !u!43 &2025733001
 Mesh:
   m_ObjectHideFlags: 0
@@ -231623,16 +232320,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057035919}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.13}
+  m_LocalRotation: {x: 0.030895049, y: 0.17515132, z: 0.009891724, w: 0.98400694}
+  m_LocalPosition: {x: 0, y: 0, z: -0.132}
   m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1281264408}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 3.287, y: 20.236, z: 1.739}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.514, y: 0.526}
+  m_AnchoredPosition: {x: 0.486, y: 0.526}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2057035921
@@ -231667,12 +232364,12 @@ MonoBehaviour:
     rgba: 4280624567
   m_fontColor: {r: 0.7169812, g: 0.14542542, b: 0.14542542, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 3
+  m_colorMode: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 0.0047169924, b: 0.38493833, a: 1}
-    topRight: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 1}
-    bottomLeft: {r: 1, g: 0, b: 0, a: 1}
-    bottomRight: {r: 0.754717, g: 0.09611962, b: 0.441845, a: 1}
+    topRight: {r: 1, g: 0.0047169924, b: 0.38493833, a: 1}
+    bottomLeft: {r: 1, g: 0.0047169924, b: 0.38493833, a: 1}
+    bottomRight: {r: 1, g: 0.0047169924, b: 0.38493833, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -231688,11 +232385,11 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -241854,6 +242551,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1653845871}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: _audioSource
+      value: 
+      objectReference: {fileID: 1520817386}
+    - target: {fileID: 6259001252599194575, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
+      propertyPath: comboManager
+      value: 
+      objectReference: {fileID: 925254232}
     - target: {fileID: 8494252056914722137, guid: b43deb1d3dff306488a228c1f54ebd23, type: 3}
       propertyPath: m_Name
       value: KnightEnemy_vCloseR

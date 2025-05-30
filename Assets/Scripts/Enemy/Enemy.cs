@@ -57,6 +57,7 @@ public class Enemy : MonoBehaviour
 
      [Header("Animation")]
     public Animator _animator;
+    public ComboManager comboManager;
 
     void Awake()
     {
@@ -148,6 +149,7 @@ public class Enemy : MonoBehaviour
         }
 
         WaveManager.enemiesDead++;
+        comboManager.RegisterKill();
 
         Destroy(gibbed, 2f);
         Destroy(gameObject, 3f);

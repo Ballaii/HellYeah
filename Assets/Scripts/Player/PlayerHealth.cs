@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     public AudioSource audioSource;
     public GameOver gameOver;
     public Transform playerCam;
+    public bool isInvincible = false;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isInvincible) return;
         if (currentHealth <= 0) return;
         currentHealth -= damage;
         audioSource.PlayOneShot(hurt);
@@ -60,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
         while (elapsed < duration)
         {
             float t = elapsed / duration;
-            // you can use Slerp or Lerp; Slerp gives a more “constant-speed” feel
+            // you can use Slerp or Lerp; Slerp gives a more ï¿½constant-speedï¿½ feel
             playerCam.rotation = Quaternion.Slerp(startRot, endRot, t);
 
             elapsed += Time.deltaTime;
@@ -76,6 +78,6 @@ public class PlayerHealth : MonoBehaviour
         // Death anim / game over
         gameOver.GameOverScreen();
 
-        // …and respawn (if you have that)
+        // ï¿½and respawn (if you have that)
     }
 }
