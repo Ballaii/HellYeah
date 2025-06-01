@@ -59,6 +59,8 @@ public class ShotgunController : MonoBehaviour
     private Vector3 pumpOriginalLocalPos;
     private Camera playerCamera;
 
+    private bool onCooldown = false;
+
     void Awake()
     {
         pellets = new List<Quaternion>(new Quaternion[pelletCount]);
@@ -73,7 +75,7 @@ public class ShotgunController : MonoBehaviour
     void Update()
     {
         if (PauseMenu.paused) return;
-        if (Input.GetButtonDown("Fire1") && !isReloading)
+        if (Input.GetButtonDown("Fire1") && !isReloading && !onCooldown)
         {
             if (currentAmmo > 0)
                 StartCoroutine(FireShotgun());
@@ -116,7 +118,7 @@ public class ShotgunController : MonoBehaviour
 
     private IEnumerator FireShotgun()
     {
-        //readyToFire = false;
+        onCooldown = true;
         currentAmmo--;
         audioSource.PlayOneShot(shotClip);
 
@@ -139,10 +141,10 @@ public class ShotgunController : MonoBehaviour
 
         // Recoil & pump
         yield return DoRecoil();
-        yield return DoPump();
+        yield return Reload();
 
-        yield return new WaitForSeconds(1f/fireRate);
-        //readyToFire = true;
+        yield return new WaitForSeconds(fireRate);
+        onCooldown = false;
     }
 
     private void PlayReload()
