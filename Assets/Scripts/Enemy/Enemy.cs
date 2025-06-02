@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(AudioSource))]
 public class Enemy : MonoBehaviour
@@ -12,6 +13,7 @@ public class Enemy : MonoBehaviour
     public AudioClip deathClip;      // ← assign in Inspector
     public AudioClip explodeClip;    // ← assign in Inspector for explosion sound
     public AudioClip hurtClip;
+    public AudioClip attackClip; // ← assign in Inspector for attack sound
     public AudioSource source;
     [Range(0f, 1f)] public float deathVolume = 0.7f;
     [Range(0f, 1f)] public float explodeVolume = 0.8f;
@@ -51,9 +53,16 @@ public class Enemy : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
-    [Header("Melee Settings")]
+    [Header("Attack Settings")]
     public int attackDamage = 20;
     public float damageRadius = 1f;
+    public GameObject projectile;
+    public Transform projectileSpawnPoint;
+    public float projectileSpeed = 200f;
+    public float projectileLifetime = 4f;
+    public bool canShoot = true;
+
+
 
      [Header("Animation")]
     public Animator _animator;
@@ -264,12 +273,73 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            // Ranged attack logic (e.g. shooting a projectile)
-            // Implement your ranged attack logic here
+            if (canShoot)
+            {
+                ShootProjectile();
+            }
         }
     }
 
-    public void ResetAttack()
+    public void ShootProjectile()
+    {
+        canShoot = false;
+        _animator.SetBool("Attacking", true);
+        Invoke(nameof(ResetCanShoot), timeBetweenAttacks);
+
+        //from TREX//ShotgunController
+        if (player != null)
+        {
+            Vector3 lookPosition = new Vector3(player.position.x, player.position.y, player.position.z);
+            transform.LookAt(lookPosition);
+        }
+
+        if (projectileSpawnPoint == null || projectile == null)
+            return;
+
+        // 1) Compute the full 3D direction to the player
+        Vector3 toPlayer = (player.position - projectileSpawnPoint.position).normalized;
+
+        // 2) Create a rotation that looks along that vector
+        Quaternion aimRot = Quaternion.LookRotation(toPlayer, Vector3.up);
+
+        // 3) Spawn pellets
+        for (int i = 0; i < 6; i++)
+        {
+            pellets.Add(Quaternion.identity);
+            pellets[i] = Quaternion.Euler(0, Random.Range(-10f, 10f), 0) * aimRot; // Add some random spread
+            //pellets[i] = Quaternion.RotateTowards(pellets[i], aimRot, 30);
+            SpawnProjectile(pellets[i], toPlayer);
+        }
+        if (attackClip) _audioSource.PlayOneShot(attackClip);
+        _animator.SetBool("Attacking", false);
+    
+    }
+    List<Quaternion> pellets = new List<Quaternion>();
+
+    private void SpawnProjectile(Quaternion aimRot, Vector3 toPlayer)
+    {
+        GameObject proj = Instantiate(projectile, projectileSpawnPoint.position, aimRot);
+        if (proj != null)
+        {
+            // Get the Rigidbody component and set its velocity
+            Rigidbody rb = proj.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.useGravity = false;
+                rb.linearVelocity = toPlayer * projectileSpeed;
+            }
+
+            Destroy(proj, 5f);
+        }
+    }
+
+      private object ResetCanShoot()
+      {
+            canShoot = true;
+            return null;
+      }
+
+      public void ResetAttack()
     {
         alreadyAttacked = false;
         _animator.SetBool("Attacking", false);

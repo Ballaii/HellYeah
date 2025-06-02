@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4457687729344168003, guid: d465bd992cb6f6d45b7a2737919896af, type: 3}
+      propertyPath: m_Radius
+      value: 0.93
+      objectReference: {fileID: 0}
     - target: {fileID: 4526726172756368745, guid: d465bd992cb6f6d45b7a2737919896af, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -161,7 +165,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.3600006
         inSlope: 0
         outSlope: 0
         tangentMode: 0

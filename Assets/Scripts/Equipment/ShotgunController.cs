@@ -141,7 +141,7 @@ public class ShotgunController : MonoBehaviour
 
         // Recoil & pump
         yield return DoRecoil();
-        yield return Reload();
+        yield return DoPump();
 
         yield return new WaitForSeconds(fireRate);
         onCooldown = false;
@@ -162,7 +162,7 @@ public class ShotgunController : MonoBehaviour
 
     private IEnumerator DoPump()
     {
-        audioSource.PlayOneShot(reloadClip);
+        PlayReload();
 
         Vector3 start = pumpOriginalLocalPos;
         Vector3 forward = new Vector3(start.x, start.y, pumpForwardZ);
