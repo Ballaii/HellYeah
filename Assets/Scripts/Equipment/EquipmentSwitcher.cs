@@ -106,6 +106,7 @@ public class EquipmentSwitcher : MonoBehaviour
             }
             else
             {
+                
                 isUsing = true;
                 StartCoroutine(beerEquip.GetComponent<BeerDrinker>().PerformTiltDrink());
                 BeerManager.Instance.StartCoroutine(BeerManager.Instance.DrinkCooldown(5f));

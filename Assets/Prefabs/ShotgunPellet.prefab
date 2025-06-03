@@ -32,6 +32,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6683166395019607259, guid: d465bd992cb6f6d45b7a2737919896af, type: 3}
+      propertyPath: m_TagString
+      value: Projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 7049986580356330484, guid: d465bd992cb6f6d45b7a2737919896af, type: 3}
       propertyPath: m_Mesh
       value: 

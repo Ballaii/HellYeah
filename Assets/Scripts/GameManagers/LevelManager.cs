@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour
 // Initialize level locks
         levelLocks["Bar"] = false;          // Always unlocked
         levelLocks["Museum"] = false;
-        levelLocks["Biker"] = true;
+        levelLocks["BikerHideout"] = false;
         levelLocks["Gym"] = true;
         levelLocks["Construction"] = true;
         levelLocks["Idk"] = true;
@@ -49,7 +49,7 @@ public class LevelManager : MonoBehaviour
     private void UpdateLevelLocksUI()
     {
         museumLockIcon.SetActive(levelLocks["Museum"]);
-        bikerLockIcon.SetActive(levelLocks["Biker"]);
+        bikerLockIcon.SetActive(levelLocks["BikerHideout"]);
         gymLockIcon.SetActive(levelLocks["Gym"]);
         constructionLockIcon.SetActive(levelLocks["Construction"]);
         idkLockIcon.SetActive(levelLocks["Idk"]);
@@ -62,7 +62,7 @@ public class LevelManager : MonoBehaviour
     // These functions can be called by buttons in the UI
     public void LoadBar() => LoadLevel("Bar");
     public void LoadMuseum() => LoadLevel("Museum");
-    public void LoadBiker() => LoadLevel("Biker");
+    public void LoadBiker() => LoadLevel("BikerHideout");
     public void LoadGym() => LoadLevel("Gym");
     public void LoadConstruction() => LoadLevel("Construction");
     public void LoadIdk() => LoadLevel("Idk");

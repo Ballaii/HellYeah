@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 /// <summary>
@@ -25,7 +26,8 @@ public class FloatingPickup : MonoBehaviour
     {
         // Calculate new Y position
         float newY = startPos.y + Mathf.Sin(Time.time * speed) * amplitude;
-        float newX = startPos.x + Mathf.Cos(Time.time * speed) * amplitude;
-        transform.position = new Vector3(newX, newY, startPos.z);
+        transform.position = new Vector3(startPos.x, newY, startPos.z);
+        quaternion rotation = quaternion.Euler(0, Mathf.Sin(Time.time * speed) * 10f, 0);
+        transform.rotation = rotation; // Apply rotation to the pickup
     }
 }

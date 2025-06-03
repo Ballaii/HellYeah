@@ -52,7 +52,11 @@ public float comboInputWindow = 0.3f;   // How long you can trigger a combo
             StopCoroutine(attackCoroutine);
             attackCoroutine = null;
         }
+        ResetAttackState();
+    }
 
+    private void ResetAttackState()
+    {
         StopAllCoroutines(); // Ensures all animations, combo logic, etc., are stopped
 
         isAttacking = false;

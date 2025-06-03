@@ -103,6 +103,17 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
             StartCoroutine(DeathSequence());
     }
+    
+    public void TakeDamage(int damage)
+    {
+        if (_isDying) return;
+        _lastExplosionOrigin = _explosionOrigin;
+        Debug.Log("Enemy took " + damage + " damage.");
+        _audioSource.PlayOneShot(hurtClip);
+        health -= damage;
+        if (health <= 0)
+            StartCoroutine(DeathSequence());
+    }
 
     public IEnumerator DeathSequence()
     {
@@ -126,7 +137,7 @@ public class Enemy : MonoBehaviour
         float tunedRadius = 5f;
         float downBias = -1f;
 
-        
+
         foreach (Rigidbody rb in alive.GetComponentsInChildren<Rigidbody>(true))
         {
             rb.AddExplosionForce(

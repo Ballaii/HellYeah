@@ -4,9 +4,8 @@ public class WaveManager : MonoBehaviour
 {
     public static int currentWave = 0;
     public static int enemiesDead = 0;
-    public int IstWave;
-    public int IIndwave;
-    public int IIIrdWave;
+    
+    public int[] wavesEnemiesCount; // Example counts for each wave
     public GameObject[] waves;
 
     void Start()
@@ -20,30 +19,25 @@ public class WaveManager : MonoBehaviour
             //GUI.Label(new Rect(500, 30, 200, 20), "Enemies Dead: " + enemiesDead);
       }
 
-      private void Update()
-    {
+      private void Update(){
         //Show wave number on screen
 
         // only do the 1→2 transition if we're still on wave 0
-        if (currentWave == 0 && enemiesDead == IstWave)
+        if (currentWave < waves.Length && enemiesDead == wavesEnemiesCount[currentWave])
         {
-            waves[0].SetActive(false);
-            currentWave = 1;
-            waves[1].SetActive(true);
-        }
-        // only do the 2→3 transition if we're still on wave 1
-        else if (currentWave == 1 && enemiesDead == IIndwave)
-        {
-            waves[1].SetActive(false);
-            currentWave = 2;
-            waves[2].SetActive(true);
-        }
-        // and so on…
-        else if (currentWave == 2 && enemiesDead == IIIrdWave)
-        {
-            waves[2].SetActive(false);
-            currentWave = 3;
-            waves[3].SetActive(true);
+        waves[currentWave].SetActive(false);
+        currentWave++;
+
+            if (currentWave < waves.Length)
+            {
+            waves[currentWave].SetActive(true);
+            }
+            else
+             {
+            // All waves completed
+            Debug.Log("All waves complete!");
+            // Trigger win condition, reset, etc.
+            }
         }
     }
 

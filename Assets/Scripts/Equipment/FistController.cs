@@ -25,26 +25,8 @@ public class FistController : MonoBehaviour
         if (PauseMenu.paused) return;
         if (Input.GetMouseButtonDown(0) && !isAttacking)
         {
-            // pick the animation based on the last direction
-            if (attackedLR)
-                StartCoroutine(AttackLeft());
-            else
-                StartCoroutine(AttackRight());
+            StartCoroutine(AttackRight());
         }
-    }
-
-    IEnumerator AttackLeft()
-    {
-        hitbox.GetComponent<Collider>().enabled = true;
-        isAttacking = true;
-        player.GetComponent<Animator>().Play("LeftFist");
-
-        yield return new WaitForSeconds(0.5f);
-        player.GetComponent<Animator>().Play("New State");
-        attackedLR = false;   // next time we’ll do a right-hand
-        isAttacking = false;
-        hitbox.GetComponent<Collider>().enabled = false;
-
     }
 
     IEnumerator AttackRight()
@@ -55,7 +37,6 @@ public class FistController : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         player.GetComponent<Animator>().Play("New State");
-        attackedLR = true;    // next time we’ll do a left-hand
         isAttacking = false;
         hitbox.GetComponent<Collider>().enabled = false;
 

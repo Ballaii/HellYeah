@@ -70325,7 +70325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 640602498}
   m_Layer: 0
-  m_Name: 4th Wave
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -251446,6 +251446,26 @@ PrefabInstance:
       propertyPath: 'waves.Array.data[3]'
       value: 
       objectReference: {fileID: 640602497}
+    - target: {fileID: 8478730745325164796, guid: d7846b8d84b5ca647a600a464825ec98, type: 3}
+      propertyPath: wavesEnemiesCount.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478730745325164796, guid: d7846b8d84b5ca647a600a464825ec98, type: 3}
+      propertyPath: 'wavesEnemiesCount.Array.data[0]'
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478730745325164796, guid: d7846b8d84b5ca647a600a464825ec98, type: 3}
+      propertyPath: 'wavesEnemiesCount.Array.data[1]'
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478730745325164796, guid: d7846b8d84b5ca647a600a464825ec98, type: 3}
+      propertyPath: 'wavesEnemiesCount.Array.data[2]'
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478730745325164796, guid: d7846b8d84b5ca647a600a464825ec98, type: 3}
+      propertyPath: 'wavesEnemiesCount.Array.data[3]'
+      value: 28
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -251605,6 +251625,10 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1010006164}
+    - target: {fileID: 3783415934243677654, guid: 868d007c479c131429c07ceb7646659e, type: 3}
+      propertyPath: isInvincible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5036720460458305461, guid: 868d007c479c131429c07ceb7646659e, type: 3}
       propertyPath: menu
       value: 

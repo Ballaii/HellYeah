@@ -8,6 +8,9 @@ TagManager:
   - Gibby
   - Enemy
   - BossHealth
+  - Moveable
+  - MusicManager
+  - Barrel
   layers:
   - Default
   - TransparentFX
