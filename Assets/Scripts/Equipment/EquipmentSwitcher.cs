@@ -17,6 +17,8 @@ public class EquipmentSwitcher : MonoBehaviour
     public GameObject grapplingEquip;
     public GameObject barbellEquip;
     public GameObject Fists;
+    public GameObject sSG;
+    public GameObject rocketLauncher;
 
     [Header("Animations")]
     public Animator player;
@@ -40,6 +42,12 @@ public class EquipmentSwitcher : MonoBehaviour
     public KeyCode shotgunKey = KeyCode.Alpha3;
     public KeyCode grapplingKey = KeyCode.C;
     public KeyCode barbellKey = KeyCode.Alpha4;
+    public KeyCode sSGKey = KeyCode.Alpha5;
+    public KeyCode rocketLauncherKey = KeyCode.Alpha6;
+
+    [Header("Unlocked")]
+    public static bool isSSGUnlocked = false;
+    public static bool isRocketLauncherUnlocked = false;
 
     bool isUsing = false;
 
@@ -52,14 +60,16 @@ public class EquipmentSwitcher : MonoBehaviour
         grapplingEquip.SetActive(false);
         barbellEquip.SetActive(false);
         Fists.SetActive(true);
-}
+        sSG.SetActive(false);
+        rocketLauncher.SetActive(false);
+    }
 
     void Update()
     {
         if (PauseMenu.paused) return;
         if (Input.GetKeyDown(throwBeerKey))
         {
-            
+
             if (BeerManager.isThrowOnCooldown)
             {
                 Debug.Log("Throw is on cooldown.");
@@ -106,7 +116,7 @@ public class EquipmentSwitcher : MonoBehaviour
             }
             else
             {
-                
+
                 isUsing = true;
                 StartCoroutine(beerEquip.GetComponent<BeerDrinker>().PerformTiltDrink());
                 BeerManager.Instance.StartCoroutine(BeerManager.Instance.DrinkCooldown(5f));
@@ -148,6 +158,26 @@ public class EquipmentSwitcher : MonoBehaviour
             if (barbellEquip.activeSelf) barbellEquip.SetActive(false);
             else StartCoroutine(BarbellEquip());
         }
+        else if (Input.GetKeyDown(sSGKey))
+        {
+            if (!isSSGUnlocked)
+            {
+                Debug.Log("SSG is not unlocked yet.");
+                return; // Exit if SSG is not unlocked
+            }
+            if (sSG.activeSelf) sSG.SetActive(false);
+            else EquipSSG();
+        }
+        else if (Input.GetKeyDown(rocketLauncherKey))
+        {
+            if (!isRocketLauncherUnlocked)
+            {
+                Debug.Log("Rocket Launcher is not unlocked yet.");
+                return; // Exit if Rocket Launcher is not unlocked
+            }
+            if (rocketLauncher.activeSelf) rocketLauncher.SetActive(false);
+            else EquipRocketLauncher();
+        }
     }
 
     IEnumerator FistsEquip()
@@ -158,6 +188,8 @@ public class EquipmentSwitcher : MonoBehaviour
         if (shotgunEquip != null) shotgunEquip.SetActive(false);
         if (grapplingEquip != null) grapplingEquip.SetActive(false);
         if (barbellEquip != null) barbellEquip.SetActive(false);
+        if (sSG != null) sSG.SetActive(false);
+        if (rocketLauncher != null) rocketLauncher.SetActive(false);
         if (Fists != null) Fists.SetActive(true);
         if (player != null)
             player.GetComponent<Animator>().Play("FistsDraw");
@@ -172,6 +204,9 @@ public class EquipmentSwitcher : MonoBehaviour
         if (swordEquip != null) swordEquip.SetActive(true);
         if (shotgunEquip != null) shotgunEquip.SetActive(false);
         if (barbellEquip != null) barbellEquip.SetActive(false);
+        if (grapplingEquip != null) grapplingEquip.SetActive(false);
+        if (sSG != null) sSG.SetActive(false);
+        if (rocketLauncher != null) rocketLauncher.SetActive(false);
         // Play swing animation
         if (player != null)
             swordEquip.GetComponent<Animator>().Play("SwordDraw");
@@ -189,7 +224,7 @@ public class EquipmentSwitcher : MonoBehaviour
         yield return new WaitForSeconds(0.667f);
         swordEquip.GetComponent<Animator>().Play("New State");
 
-        
+
     }
 
     IEnumerator EquipShotgun()
@@ -197,7 +232,10 @@ public class EquipmentSwitcher : MonoBehaviour
         if (Fists != null) Fists.SetActive(false);
         if (swordEquip != null) swordEquip.SetActive(false);
         if (shotgunEquip != null) shotgunEquip.SetActive(true);
-        if ( barbellEquip != null) barbellEquip.SetActive(false);
+        if (barbellEquip != null) barbellEquip.SetActive(false);
+        if (grapplingEquip != null) grapplingEquip.SetActive(false);
+        if (sSG != null) sSG.SetActive(false);
+        if (rocketLauncher != null) rocketLauncher.SetActive(false);
         // Play swing animation
         if (player != null)
             shotgunEquip.GetComponent<Animator>().Play("ShotgunDraw");
@@ -214,16 +252,18 @@ public class EquipmentSwitcher : MonoBehaviour
         yield return new WaitForSeconds(0.267f);
         shotgunEquip.GetComponent<Animator>().Play("New State");
 
-        
+
     }
 
     IEnumerator BarbellEquip()
     {
         if (Fists != null) Fists.SetActive(false);
-        if(swordEquip != null) swordEquip.SetActive(false);
+        if (swordEquip != null) swordEquip.SetActive(false);
         if (shotgunEquip != null) shotgunEquip.SetActive(false);
         if (grapplingEquip != null) grapplingEquip.SetActive(false);
         if (barbellEquip != null) barbellEquip.SetActive(true);
+        if (sSG != null) sSG.SetActive(false);
+        if (rocketLauncher != null) rocketLauncher.SetActive(false);
         // Play swing animation
         if (player != null)
             player.GetComponent<Animator>().Play("DrawBarbell");
@@ -244,10 +284,14 @@ public class EquipmentSwitcher : MonoBehaviour
     IEnumerator GrapplingEquip()
     {
         if (Fists != null) Fists.SetActive(false);
-        if (grapplingEquip  != null) grapplingEquip.SetActive(true);
+        if (grapplingEquip != null) grapplingEquip.SetActive(true);
         if (beerEquip != null) beerEquip.SetActive(false);
         if (cigEquip != null) cigEquip.SetActive(false);
         if (barbellEquip != null) barbellEquip.SetActive(false);
+        if (swordEquip != null) swordEquip.SetActive(false);
+        if (shotgunEquip != null) shotgunEquip.SetActive(false);
+        if (sSG != null) sSG.SetActive(false);
+        if (rocketLauncher != null) rocketLauncher.SetActive(false);
         if (player != null)
             player.GetComponent<Animator>().Play("DrawGrapple");
         else
@@ -262,5 +306,28 @@ public class EquipmentSwitcher : MonoBehaviour
         }
         yield return new WaitForSeconds(0.267f);
         player.GetComponent<Animator>().Play("New State");
+    }
+    public void EquipSSG()
+    {
+        if (sSG != null) sSG.SetActive(true);
+        if (Fists != null) Fists.SetActive(false);
+        if (swordEquip != null) swordEquip.SetActive(false);
+        if (shotgunEquip != null) shotgunEquip.SetActive(false);
+        if (grapplingEquip != null) grapplingEquip.SetActive(false);
+        if (barbellEquip != null) barbellEquip.SetActive(false);
+        if (rocketLauncher != null) rocketLauncher.SetActive(false);
+
+
+    }
+    
+    public void EquipRocketLauncher()
+    {
+        if (rocketLauncher != null) rocketLauncher.SetActive(true);
+        if (Fists != null) Fists.SetActive(false);
+        if (swordEquip != null) swordEquip.SetActive(false);
+        if (shotgunEquip != null) shotgunEquip.SetActive(false);
+        if (grapplingEquip != null) grapplingEquip.SetActive(false);
+        if (barbellEquip != null) barbellEquip.SetActive(false);
+        if (sSG != null) sSG.SetActive(false);
     }
 }
