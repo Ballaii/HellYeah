@@ -3,6 +3,8 @@ using UnityEngine;
 public class RocketLauncher : MonoBehaviour
 {
     [Header("Ammo & Firing")]
+    public int maxAmmo = 10;
+    public int currentAmmo = 10;
     public int rocketCount = 1;
     public float rocketSpeed = 100f;
     public float rocketLifetime = 5f;
@@ -28,6 +30,7 @@ public class RocketLauncher : MonoBehaviour
 
     void FireRocket()
     {
+        if (currentAmmo <= 0) return;
         if (rocketPrefab == null || muzzlePoint == null)
         {
             Debug.LogError("Rocket prefab or muzzle point is missing.");
@@ -46,6 +49,11 @@ public class RocketLauncher : MonoBehaviour
             // Rocket script already handles its own destruction
         }
 
+        currentAmmo--;
+        if (currentAmmo < 0)
+        {
+            currentAmmo = 0;
+        }
         if (muzzleFlash != null)
         {
             Instantiate(muzzleFlash, muzzlePoint.position, muzzlePoint.rotation);
@@ -64,6 +72,15 @@ public class RocketLauncher : MonoBehaviour
 
         onCooldown = true;
         Invoke(nameof(ResetCooldown), 1f / fireRate);
+    }
+
+    public void AddAmmo(int amount)
+    {
+        currentAmmo += amount;
+        if (currentAmmo > maxAmmo)
+        {
+            currentAmmo = maxAmmo;
+        }
     }
 
     void ResetCooldown()

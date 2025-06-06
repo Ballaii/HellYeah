@@ -3,7 +3,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     [Header("Rocket Settings")]
-    public float speed = 100f;
+    public float speed = 25f;
     public float lifetime = 5f;
     public float explosionRadius = 5f;
     public float explosionForce = 700f;
@@ -114,11 +114,24 @@ public class Rocket : MonoBehaviour
                 }
             }
             if (enemy.CompareTag("Barrel"))
-{
-             BarrelScript barrel = enemy.GetComponent<BarrelScript>();
-             if (barrel != null)
+            {
+                BarrelScript barrel = enemy.GetComponent<BarrelScript>();
+                if (barrel != null)
                 {
                     barrel.Explode();
+                }
+            }
+            if (enemy.CompareTag("Player"))
+            {
+                PlayerHealth playerHealth = enemy.GetComponent<PlayerHealth>();
+                CPMPlayer controller = enemy.GetComponent<CPMPlayer>();
+                if (controller != null)
+                {
+                    controller.RocketJump(transform.position, 7.5f);
+                }
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(10);
                 }
             }
         }

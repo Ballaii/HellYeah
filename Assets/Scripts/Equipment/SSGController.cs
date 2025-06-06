@@ -48,9 +48,9 @@ public class SSGController : MonoBehaviour
 
     [Header("Ammunition")]
     [Tooltip("Maximum shells in the shotgun.")]
-    public int maxAmmo = 1;
+    public int maxAmmo = 5;
     [Tooltip("Current loaded shells.")]
-    public int currentAmmo = 1;
+    public int currentAmmo = 5;
     [Tooltip("Time it takes to reload one shell.")]
     public float reloadTimePerShell = 1.2f;
     private bool isReloading = false;
@@ -110,6 +110,15 @@ public class SSGController : MonoBehaviour
         isReloading = false;
     }
 
+    public void AddAmmo(int amount)
+    {
+        currentAmmo += amount;
+        if (currentAmmo > maxAmmo)
+        {
+            currentAmmo = maxAmmo;
+        }
+    }
+
     public void CancelReload()
     {
         isReloading = false;
@@ -117,6 +126,7 @@ public class SSGController : MonoBehaviour
 
     private IEnumerator FireShotgun()
     {
+        if (currentAmmo <= 0) yield break;
         onCooldown = true;
         currentAmmo--;
         audioSource.PlayOneShot(shotClip);

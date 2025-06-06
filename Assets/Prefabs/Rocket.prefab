@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 3243777588982442413}
   - component: {fileID: 2015312356053337226}
   - component: {fileID: -5584898422124174326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rocket
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 4855638414264437767, guid: 2b3697f20e23d0a4ab92b05085ff3e80, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f2ebfe143c7184eaf82747c435b0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 40
   lifetime: 5
   explosionRadius: 5
   explosionForce: 700

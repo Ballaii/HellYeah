@@ -5,22 +5,71 @@ using UnityEngine;
 /// When the player enters the trigger, it adds ammo to their ThrowBeer component and destroys itself.
 /// </summary>
 [RequireComponent(typeof(Collider))]
-[RequireComponent(typeof(Rigidbody))]
 public class AmmoPickup : MonoBehaviour
 {
     [Header("Pickup Settings")]
     [Tooltip("Amount of ammo to add when picked up.")]
-    public int ammoAmount = 5;
+    public int ammoAmount;
+    [Tooltip("Tag of the player to check for pickup.")]
+    public string playerTag = "Player";
+    [Tooltip("Audio clip to play on pickup.")]
+    public AudioClip pickupSound;
+    private AudioSource audioSource;
 
-    private void Reset()
+    public enum AmmoType
     {
-        // Ensure this collider is a trigger by default
-        Collider col = GetComponent<Collider>();
-        col.isTrigger = true;
+        RocketLauncher,
+        SuperShotgun
+    }
 
-        Rigidbody rb = GetComponent<Rigidbody>();
-        rb.isKinematic = true;
-        rb.useGravity = false;
+    public AmmoType ammoType;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(playerTag))
+        {
+            //check for ammo type
+            switch (ammoType)
+            {
+                case AmmoType.RocketLauncher:
+                    RocketLauncher rocketLauncher = other.GetComponent<RocketLauncher>();
+                    if (rocketLauncher != null)
+                    {
+                        rocketLauncher.AddAmmo(ammoAmount);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("RocketLauncher component not found on player.");
+                    }
+                    break;
+                case AmmoType.SuperShotgun:
+                    SSGController superShotgun = other.GetComponent<SSGController>();
+                    if (superShotgun != null)
+                    {
+                        superShotgun.AddAmmo(ammoAmount);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("SuperShotgun component not found on player.");
+                    }
+                    break;
+            }
+
+            if (pickupSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(pickupSound);
+            }
+            Destroy(gameObject);
+        }
     }
 
     

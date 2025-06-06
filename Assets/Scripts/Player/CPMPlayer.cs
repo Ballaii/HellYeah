@@ -76,6 +76,8 @@ public class CPMPlayer : MonoBehaviour
     public float jumpSpeed = 8.0f;                // The speed at which the character's up axis gains when hitting jump
     public bool holdJumpToBhop = false;           // When enabled allows player to just hold jump button to keep on bhopping perfectly. Beware: smells like casual.
     public float swingSpeed = 12.0f;              // ← NEW: Added for grappling integration
+    private float rocketJumpForce = 0f;
+    private float rocketJumpDecay = 30f; // how quickly it fades out
 
     /*print() style */
     public GUIStyle style;
@@ -279,6 +281,21 @@ public class CPMPlayer : MonoBehaviour
         if(playerView != null)                          // ← NEW: Added for grappling integration
             cam.DoFov(grappleFov);               // ← NEW: Added for grappling integration
     }
+
+    public void RocketJump(Vector3 explosionPoint, float jumpForce)
+{
+    Vector3 jumpDirection = (transform.position - explosionPoint).normalized;
+
+    // Ensure Y is positive for upward lift
+    if (jumpDirection.y < 0f)
+        jumpDirection.y = -jumpDirection.y;
+
+    // Scale and apply to your movement velocity
+    // This assumes you apply 'velocity' each frame in your movement logic
+    playerVelocity += jumpDirection * jumpForce;
+}
+
+
 
     public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
     {
