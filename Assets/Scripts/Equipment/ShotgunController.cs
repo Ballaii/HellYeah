@@ -72,6 +72,18 @@ public class ShotgunController : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
     }
 
+    void OnDisable()
+    {
+        // Reset shotgun position when disabled
+        shotgunTransform.localPosition = shotgunOriginalPos;
+        pumpTransform.localPosition = pumpOriginalLocalPos;
+        shotlight.enabled = false;
+        StopAllCoroutines();
+        onCooldown = false;
+        isReloading = false;
+        
+    }
+
     void Update()
     {
         if (PauseMenu.paused) return;

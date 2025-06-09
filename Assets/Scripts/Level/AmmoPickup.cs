@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -41,10 +42,12 @@ public class AmmoPickup : MonoBehaviour
             switch (ammoType)
             {
                 case AmmoType.RocketLauncher:
-                    RocketLauncher rocketLauncher = other.GetComponent<RocketLauncher>();
+                    RocketLauncher rocketLauncher = other.GetComponentInChildren<RocketLauncher>();
+
                     if (rocketLauncher != null)
                     {
                         rocketLauncher.AddAmmo(ammoAmount);
+
                     }
                     else
                     {
@@ -64,13 +67,19 @@ public class AmmoPickup : MonoBehaviour
                     break;
             }
 
-            if (pickupSound != null && audioSource != null)
-            {
-                audioSource.PlayOneShot(pickupSound);
-            }
-            Destroy(gameObject);
+            StartCoroutine(PickupAndDestroy());
         }
     }
 
-    
+    IEnumerator PickupAndDestroy()
+{
+    if (pickupSound != null)
+    {
+        audioSource.PlayOneShot(pickupSound);
+        yield return new WaitForSeconds(pickupSound.length);
+    }
+    Destroy(gameObject);
+}
+
+
 }

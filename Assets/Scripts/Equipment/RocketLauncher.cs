@@ -22,10 +22,12 @@ public class RocketLauncher : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !onCooldown)
+        
+        if (Input.GetButtonDown("Fire1") && !onCooldown && currentAmmo > 0)
         {
             FireRocket();
         }
+        
     }
 
     void FireRocket()
@@ -80,6 +82,7 @@ public class RocketLauncher : MonoBehaviour
         if (currentAmmo > maxAmmo)
         {
             currentAmmo = maxAmmo;
+
         }
     }
 

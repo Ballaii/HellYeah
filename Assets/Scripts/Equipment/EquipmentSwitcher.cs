@@ -64,9 +64,45 @@ public class EquipmentSwitcher : MonoBehaviour
         rocketLauncher.SetActive(false);
     }
 
+
+    private Coroutine currentEquipCoroutine;
+
+    private float switchCooldown = 0.5f;
+private float lastSwitchTime = -999f;
+
+bool CanSwitchNow()
+{
+    return Time.time >= lastSwitchTime + switchCooldown;
+}
+    void ResetAnimations()
+    {
+        player.GetComponent<Animator>().Play("New State");
+        swordEquip.GetComponent<Animator>().Play("New State");
+        shotgunEquip.GetComponent<Animator>().Play("New State");
+}
+bool CheckAndStartCoroutine(IEnumerator newEquipRoutine)
+{
+    ResetAnimations();
+    if (!CanSwitchNow()) return false;
+
+    if (currentEquipCoroutine != null)
+        StopCoroutine(currentEquipCoroutine);
+
+    currentEquipCoroutine = StartCoroutine(RunEquipRoutine(newEquipRoutine));
+    lastSwitchTime = Time.time;
+    return true;
+}
+
+    private IEnumerator RunEquipRoutine(IEnumerator routine)
+    {
+        yield return StartCoroutine(routine);
+        currentEquipCoroutine = null; // Reset when done
+    }
+
     void Update()
     {
         if (PauseMenu.paused) return;
+
         if (Input.GetKeyDown(throwBeerKey))
         {
 
@@ -123,7 +159,8 @@ public class EquipmentSwitcher : MonoBehaviour
                 isUsing = false;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha0))
+        
+        if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             if (beerEquip != null) beerEquip.SetActive(false);
             if (cigEquip != null) cigEquip.SetActive(false);
@@ -136,27 +173,27 @@ public class EquipmentSwitcher : MonoBehaviour
         else if (Input.GetKeyDown(FistsKey))
         {
             if (Fists.activeSelf) return;
-            else StartCoroutine(FistsEquip());
+            else CheckAndStartCoroutine(FistsEquip());
         }
         else if (Input.GetKeyDown(swordKey))
         {
             if (swordEquip.activeSelf) swordEquip.SetActive(false);
-            else StartCoroutine(EquipSword());
+            else CheckAndStartCoroutine(EquipSword());
         }
         else if (Input.GetKeyDown(shotgunKey))
         {
             if (shotgunEquip.activeSelf) shotgunEquip.SetActive(false);
-            else StartCoroutine(EquipShotgun());
+            else CheckAndStartCoroutine(EquipShotgun());
         }
         else if (Input.GetKeyDown(grapplingKey))
         {
             if (grapplingEquip.activeSelf) grapplingEquip.SetActive(false);
-            else StartCoroutine(GrapplingEquip());
+            else CheckAndStartCoroutine(GrapplingEquip());
         }
         else if (Input.GetKeyDown(barbellKey))
         {
             if (barbellEquip.activeSelf) barbellEquip.SetActive(false);
-            else StartCoroutine(BarbellEquip());
+            else CheckAndStartCoroutine(BarbellEquip());
         }
         else if (Input.GetKeyDown(sSGKey))
         {

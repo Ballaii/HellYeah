@@ -29,7 +29,15 @@ public class FistController : MonoBehaviour
         }
     }
 
-    IEnumerator AttackRight()
+      void OnDisable()
+      {
+            hitbox.GetComponent<Collider>().enabled = false;
+            isAttacking = false;
+            player.GetComponent<Animator>().Play("New State");
+            attackedLR = false;
+      }
+
+      IEnumerator AttackRight()
     {
         hitbox.GetComponent<Collider>().enabled = true;
         isAttacking = true;
